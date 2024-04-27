@@ -1,7 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import { buildWebpack } from "./config/webpack/buildWebpack";
-import { BuildMode, BuildPaths } from "@/types/webpackTypes";
+import { BuildMode, BuildPaths } from "config/webpack/types";
 
 interface EnvVariables {
   mode: BuildMode;
@@ -14,6 +14,7 @@ export default (env: EnvVariables) => {
     entry: path.resolve(__dirname, "src", "index.tsx"),
     html: path.resolve(__dirname, "public", "index.html"),
     assets: path.resolve(__dirname, "src", "assets"),
+    styles: path.resolve(__dirname, "src", "styles"),
     components: path.resolve(__dirname, "src", "components"),
     constants: path.resolve(__dirname, "src", "constants"),
     pages: path.resolve(__dirname, "src", "pages"),

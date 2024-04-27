@@ -2,7 +2,7 @@ import webpack, { Configuration } from "webpack";
 import dotenv from "dotenv-webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "@/types/webpackTypes";
+import { BuildOptions } from "./types";
 
 export function buildPlugins({
   mode,
