@@ -6,14 +6,8 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const isDev = options.mode === "development";
 
   const assetLoader = {
-    test: /\.(png|jpg|jpeg|gif)$/i,
+    test: /\.(png|jpg|jpeg|gif|svg)$/i,
     type: "asset/resource"
-  };
-
-  const svgLoader = {
-    test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
-    use: [{ loader: "@svgr/webpack", options: { icon: true } }]
   };
 
   const scssLoader = {
@@ -38,5 +32,5 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     type: "asset/resource"
   };
 
-  return [assetLoader, scssLoader, babelLoader, svgLoader, fontsLoader];
+  return [assetLoader, scssLoader, babelLoader, fontsLoader];
 }
