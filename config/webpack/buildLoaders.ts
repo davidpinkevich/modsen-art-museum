@@ -32,5 +32,11 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
       loader: "babel-loader"
     }
   };
-  return [assetLoader, scssLoader, babelLoader, svgLoader];
+
+  const fontsLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    type: "asset/resource"
+  };
+
+  return [assetLoader, scssLoader, babelLoader, svgLoader, fontsLoader];
 }
