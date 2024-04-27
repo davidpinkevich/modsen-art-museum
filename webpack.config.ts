@@ -1,7 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import { buildWebpack } from "./config/webpack/buildWebpack";
-import { BuildMode, BuildPaths } from "./config/webpack/types";
+import { BuildMode, BuildPaths } from "@/types/webpackTypes";
 
 interface EnvVariables {
   mode: BuildMode;
@@ -17,7 +17,8 @@ export default (env: EnvVariables) => {
     components: path.resolve(__dirname, "src", "components"),
     constants: path.resolve(__dirname, "src", "constants"),
     pages: path.resolve(__dirname, "src", "pages"),
-    utils: path.resolve(__dirname, "src", "utils ")
+    utils: path.resolve(__dirname, "src", "utils"),
+    types: path.resolve(__dirname, "src", "types")
   };
   const config: webpack.Configuration = buildWebpack({
     port: env.port ?? 3000,

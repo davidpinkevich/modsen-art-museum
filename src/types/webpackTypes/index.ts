@@ -7,6 +7,7 @@ export interface BuildPaths {
   constants: string;
   pages: string;
   utils: string;
+  types: string;
 }
 
 export type BuildMode = "production" | "development";

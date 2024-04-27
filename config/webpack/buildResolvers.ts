@@ -1,5 +1,5 @@
 import { Configuration } from "webpack";
-import { BuildOptions } from "./types";
+import { BuildOptions } from "@/types/webpackTypes";
 
 export function buildResolvers(
   options: BuildOptions
@@ -11,7 +11,8 @@ export function buildResolvers(
       "@components": options.paths.components,
       "@constants": options.paths.constants,
       "@pages": options.paths.pages,
-      "@utils ": options.paths.pages
+      "@utils": options.paths.utils,
+      "@types": options.paths.types
     }
   };
 }
