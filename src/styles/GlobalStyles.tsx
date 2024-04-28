@@ -1,7 +1,22 @@
 import { createGlobalStyle } from "styled-components";
+import Inter from "@assets/fonts/Inter.ttf";
+import LexendDeca from "@assets/fonts/LexendDeca.ttf";
 
 const GlobalStyles = createGlobalStyle`
-    * {
+  @font-face {
+      font-family: 'Inter';
+      src: url(${Inter}) format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Lexend Deca';
+    src: url(${LexendDeca}) format('truetype');
+  }
+
+  body {
+    font-family: 'Inter';
+  }
+  * {
     padding: 0;
     margin: 0;
     border: 0;
