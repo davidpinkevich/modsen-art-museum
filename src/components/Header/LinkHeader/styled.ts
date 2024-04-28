@@ -1,17 +1,17 @@
 import styled from "styled-components";
 
-const StyledLink = styled.div<{ menu?: boolean }>`
+const StyledLink = styled.div<{ type: string }>`
   a {
     display: flex;
-    align-items: ${(props) => (props.menu ? "center" : "flex-end")};
+    align-items: ${(props) => (props.type === "menu" ? "center" : "flex-end")};
     gap: 5px;
   }
 `;
 
-const StyledLinkImage = styled.div<{ menu?: boolean }>`
+const StyledLinkImage = styled.div<{ type: string }>`
   position: relative;
-  width: ${(props) => (props.menu ? "20px" : "62px")};
-  height: ${(props) => (props.menu ? "20px" : "50px")};
+  width: ${(props) => (props.type === "menu" ? "20px" : "62px")};
+  height: ${(props) => (props.type === "menu" ? "20px" : "50px")};
   & img {
     position: absolute;
     top: 0;
@@ -22,8 +22,8 @@ const StyledLinkImage = styled.div<{ menu?: boolean }>`
   }
 `;
 
-const StyledLinkTitle = styled.h2<{ menu?: boolean }>`
-  font-size: ${(props) => (props.menu ? "16px" : "18px")};
+const StyledLinkTitle = styled.h2<{ type: string }>`
+  font-size: ${(props) => (props.type === "menu" ? "16px" : "18px")};
   color: white;
   & span {
     color: rgba(224, 164, 73, 1);

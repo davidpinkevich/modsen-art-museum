@@ -9,7 +9,7 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <StyledHeaderContainer>
-          <LinkHeader path="./" alt="logo" img={logoImg}>
+          <LinkHeader path="./" alt="logo" img={logoImg} type="logo">
             Museum of <span>Art</span>
           </LinkHeader>
           <Menu />
