@@ -6,10 +6,14 @@ import { StyledMenu } from "./styled";
 const Menu = () => {
   return (
     <StyledMenu>
-      <LinkHeader img={homeImg} alt="home" path="./" menu>
+      <LinkHeader img={homeImg} alt="home" path="./" type="menu">
         Home
       </LinkHeader>
-      <LinkHeader img={favoriteImg} alt="favorites" path="/favorite" menu>
+      <LinkHeader
+        img={favoriteImg}
+        alt="favorites"
+        path="/favorite"
+        type="menu">
         Your favorites
       </LinkHeader>
     </StyledMenu>
