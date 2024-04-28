@@ -1,6 +1,6 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
-import { App } from "./components/App/App";
+import { App } from "@components/App";
+import { GlobalStyles } from "@styles/GlobalStyles";
 
 const root = document.getElementById("root");
 
@@ -8,11 +8,9 @@ if (root === null) {
   throw new Error("root not found");
 }
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />
-  }
-]);
-
-createRoot(root).render(<RouterProvider router={router} />);
+createRoot(root).render(
+  <>
+    <GlobalStyles />
+    <App />
+  </>
+);
