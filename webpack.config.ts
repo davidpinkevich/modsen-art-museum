@@ -16,6 +16,7 @@ export default (env: EnvVariables) => {
     src: path.resolve(__dirname, "src"),
     assets: path.resolve(__dirname, "src", "assets"),
     styles: path.resolve(__dirname, "src", "styles"),
+    services: path.resolve(__dirname, "src", "services"),
     components: path.resolve(__dirname, "src", "components"),
     constants: path.resolve(__dirname, "src", "constants"),
     pages: path.resolve(__dirname, "src", "pages"),

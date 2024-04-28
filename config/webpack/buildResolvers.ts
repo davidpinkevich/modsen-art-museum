@@ -10,6 +10,7 @@ export function buildResolvers(
       "@assets": options.paths.assets,
       "@components": options.paths.components,
       "@styles": options.paths.styles,
+      "@services": options.paths.services,
       "@constants": options.paths.constants,
       "@pages": options.paths.pages,
       "@utils": options.paths.utils
