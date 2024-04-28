@@ -13,13 +13,13 @@ export default (env: EnvVariables) => {
     output: path.resolve(__dirname, "build"),
     entry: path.resolve(__dirname, "src", "index.tsx"),
     html: path.resolve(__dirname, "public", "index.html"),
+    src: path.resolve(__dirname, "src"),
     assets: path.resolve(__dirname, "src", "assets"),
     styles: path.resolve(__dirname, "src", "styles"),
     components: path.resolve(__dirname, "src", "components"),
     constants: path.resolve(__dirname, "src", "constants"),
     pages: path.resolve(__dirname, "src", "pages"),
-    utils: path.resolve(__dirname, "src", "utils"),
-    types: path.resolve(__dirname, "src", "types")
+    utils: path.resolve(__dirname, "src", "utils")
   };
   const config: webpack.Configuration = buildWebpack({
     port: env.port ?? 3000,

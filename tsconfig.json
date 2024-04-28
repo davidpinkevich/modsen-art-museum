@@ -12,13 +12,13 @@
     "baseUrl": ".",
     "strict": true,
     "paths": {
+      "@src*": ["./src*"],
       "@assets/*": ["./src/assets/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
       "@constants/*": ["./src/constants/*"],
       "@pages/*": ["./src/pages/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@types/*": ["./src/types/*"]
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "types": ["jest", "@testing-library/jest-dom", "node"],

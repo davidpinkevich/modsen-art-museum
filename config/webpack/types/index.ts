@@ -2,12 +2,12 @@ export interface BuildPaths {
   entry: string;
   html: string;
   output: string;
+  src: string;
   assets: string;
   components: string;
   constants: string;
   pages: string;
   utils: string;
-  types: string;
   styles: string;
 }
 

@@ -6,13 +6,13 @@ export function buildResolvers(
 ): Configuration["resolve"] {
   return {
     alias: {
+      "@src": options.paths.src,
       "@assets": options.paths.assets,
       "@components": options.paths.components,
       "@styles": options.paths.styles,
       "@constants": options.paths.constants,
       "@pages": options.paths.pages,
-      "@utils": options.paths.utils,
-      "@types": options.paths.types
+      "@utils": options.paths.utils
     },
     extensions: [".tsx", ".ts", ".js"]
   };
