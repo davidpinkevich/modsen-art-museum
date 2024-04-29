@@ -4,6 +4,7 @@ export interface BuildPaths {
   output: string;
   src: string;
   assets: string;
+  hooks: string;
   services: string;
   components: string;
   constants: string;
