@@ -22,6 +22,15 @@ export interface TypeArts {
   data: TypeArt[];
 }
 
+export interface TypeRandomArts extends TypeArts {
+  load: boolean;
+}
+
 export interface TypeForm {
   searh: string;
+}
+
+export interface TypeContext {
+  favorites: TypeArt[];
+  addFavorite: (item: TypeArt) => void;
 }
