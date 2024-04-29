@@ -7,7 +7,7 @@ import logoImg from "@assets/icons/logo.svg";
 const Header = () => {
   return (
     <StyledHeader>
-      <Container>
+      <Container content="space-between">
         <StyledHeaderContainer>
           <LinkHeader path="./" alt="logo" img={logoImg} type="logo">
             Museum of <span>Art</span>
