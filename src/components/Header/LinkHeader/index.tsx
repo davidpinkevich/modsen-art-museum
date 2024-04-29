@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { StyledLink, StyledLinkImage, StyledLinkTitle } from "./styled";
-import { TypeLinkHeader } from "@src/types";
+import { type TypeLinkHeader } from "@src/types";
 
 const LinkHeader: React.FC<TypeLinkHeader> = (props) => {
   return (
