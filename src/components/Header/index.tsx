@@ -4,7 +4,7 @@ import { LinkHeader } from "./LinkHeader";
 import { Container } from "@styles/Container";
 import logoImg from "@assets/icons/logo.svg";
 
-const Header = () => {
+const Header: React.FC = () => {
   return (
     <StyledHeader>
       <Container content="space-between">

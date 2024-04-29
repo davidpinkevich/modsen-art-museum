@@ -3,7 +3,7 @@ import homeImg from "@assets/icons/home.svg";
 import favoriteImg from "@assets/icons/saved.svg";
 import { StyledMenu } from "./styled";
 
-const Menu = () => {
+const Menu: React.FC = () => {
   return (
     <StyledMenu>
       <LinkHeader img={homeImg} alt="home" path="./" type="menu">

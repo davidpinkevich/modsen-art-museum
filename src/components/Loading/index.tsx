@@ -1,6 +1,6 @@
 import { StyledLoading, SpanOne, SpanTwo, SpanThree } from "./styled";
 
-const Loading = () => {
+const Loading: React.FC = () => {
   return (
     <StyledLoading>
       Search arts
