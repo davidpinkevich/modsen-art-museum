@@ -1,19 +1,24 @@
+import { getFilter } from "@utils/helpers/getFilter";
+import { getSearch } from "@utils/helpers/getSearch";
 import { type TypeArt, type TypeArts } from "@src/types";
 
 class MuseumService {
   async getFullInformation(id: number) {
-    const respone = await fetch(`${process.env.BASE_URL!}${id}`);
-    return await respone.json();
+    const respone = await fetch(`${process.env.BASE_URL}/${id}`);
+    const result: { data: TypeArt } = await respone.json();
+    return result.data;
   }
 
   async getArtsSearch(
     search: string,
     limit: number,
+    filter: string,
     page: number
   ): Promise<TypeArt[] | undefined> {
     try {
+      const pagination = `&limit=${limit}&page=${page}`;
       const respone = await fetch(
-        `${process.env.BASE_URL}search?q=${search}&limit=${limit}&page=${page}`
+        `${process.env.BASE_URL}/search?${getSearch(search)}${getFilter(filter)}${pagination}`
       );
 
       const data: TypeArts = await respone.json();
