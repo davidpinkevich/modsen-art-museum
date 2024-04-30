@@ -3,6 +3,7 @@ import styled from "styled-components";
 const StyledCardBtn = styled.button`
   background-color: rgba(249, 249, 249, 1);
   border-radius: 50%;
+  align-self: center;
   width: 59px;
   height: 59px;
   transition: all 0.2s;

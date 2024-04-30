@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledCardInfo = styled.div`
   flex-grow: 1;
-  align-items: flex-start;
   height: 100%;
 `;
 
