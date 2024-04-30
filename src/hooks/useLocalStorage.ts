@@ -1,5 +1,5 @@
-import { TypeArt } from "@src/types";
 import { useEffect, useState } from "react";
+import { type TypeArt } from "@src/types";
 
 const useLocalStorage = (init: TypeArt[], key: string) => {
   const getValue = () => {

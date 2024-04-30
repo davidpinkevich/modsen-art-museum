@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { TypeContext, TypeArt } from "@src/types";
+import { type TypeContext, type TypeArt } from "@src/types";
 
 const FavoritesContext = createContext<TypeContext>({
   favorites: [],
