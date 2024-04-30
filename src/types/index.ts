@@ -24,8 +24,9 @@ export interface TypeArts {
   data: TypeArt[];
 }
 
-export interface TypeRandomArts extends TypeArts {
+export interface TypeBlockArts extends TypeArts {
   load: boolean;
+  type: "main" | "random" | "favorites";
 }
 
 export interface TypeForm {
@@ -54,4 +55,15 @@ export interface TypeContext {
 export interface TypeCard {
   item: TypeArt;
   type?: string;
+}
+
+interface ArtBlock {
+  title: string;
+  info: string;
+}
+
+export interface TypeArtsBlock {
+  main: ArtBlock;
+  random: ArtBlock;
+  favorites: ArtBlock;
 }
