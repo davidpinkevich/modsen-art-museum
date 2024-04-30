@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Inter';
+    background-color: rgba(250,250,250,1);
   }
   * {
     padding: 0;
