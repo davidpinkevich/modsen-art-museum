@@ -36,7 +36,6 @@ const Forms: React.FC<TypeForms> = (props) => {
           setFilter={props.setFilter}
           load={props.load}
         />
-        {props.load && <Loading />}
       </StyledFormBody>
     </Container>
   );
