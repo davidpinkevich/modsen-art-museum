@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledRandomArts = styled.div`
+const StyledBlockArts = styled.div`
   width: 100%;
   margin-top: 40px;
   font-family: "Lexend Deca";
@@ -21,17 +21,16 @@ const StyledBlockArtInfo = styled.div`
   color: rgba(57, 57, 57, 1);
 `;
 
-const StyledRandomItems = styled.div`
+const StyledBlockItems = styled.div<{ type: string }>`
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 20px;
+  gap: ${(props) => (props.type === "main" ? "60px" : "20px")};
 `;
 
 export {
-  StyledRandomArts,
+  StyledBlockArts,
   StyledBlockArtTitle,
   StyledBlockArtInfo,
-  StyledRandomItems
+  StyledBlockItems
 };
