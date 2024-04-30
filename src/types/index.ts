@@ -11,11 +11,13 @@ export interface TypeArt {
   artist_title: string;
   artwork_type_title: string;
   copyright_notice: string;
+  title: string;
   date_start: number;
   date_end: number;
   dimensions: string;
   description: string;
-  image_id: string;
+  is_public_domain: boolean;
+  image_id: string | null;
 }
 
 export interface TypeArts {
@@ -33,4 +35,9 @@ export interface TypeForm {
 export interface TypeContext {
   favorites: TypeArt[];
   addFavorite: (item: TypeArt) => void;
+}
+
+export interface TypeCard {
+  item: TypeArt;
+  type?: string;
 }
