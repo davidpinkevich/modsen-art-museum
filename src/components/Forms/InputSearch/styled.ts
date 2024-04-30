@@ -12,6 +12,14 @@ const StyledInput = styled.input`
   font-size: 20px;
   width: 100%;
   background-color: rgba(57, 57, 57, 0.05);
+  transition: all 0.2s;
+  &:hover {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+  }
+  &:focus {
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 1);
+    background-color: rgba(57, 57, 57, 0.1);
+  }
   &::placeholder {
     font-size: 16px;
     color: rgba(57, 57, 57, 0.5);
