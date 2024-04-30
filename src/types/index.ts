@@ -32,6 +32,20 @@ export interface TypeForm {
   searh: string;
 }
 
+export interface TypeForms {
+  filter: string;
+  load: boolean;
+  setFilter: (value: string) => void;
+  setSearch: (value: string) => void;
+  setPage: (value: number) => void;
+}
+
+export interface TypeFilters {
+  filter: string;
+  load: boolean;
+  setFilter: (value: string) => void;
+}
+
 export interface TypeContext {
   favorites: TypeArt[];
   addFavorite: (item: TypeArt) => void;
