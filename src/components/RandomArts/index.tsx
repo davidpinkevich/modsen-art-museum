@@ -4,8 +4,8 @@ import { createImages } from "@utils/helpers/createImages";
 import { Container } from "@styles/Container";
 import {
   StyledRandomArts,
-  StyledRandomTitle,
-  StyledRandomInfo,
+  StyledBlockArtTitle,
+  StyledBlockArtInfo,
   StyledRandomItems
 } from "./styled";
 import { type TypeRandomArts } from "@src/types";
@@ -14,8 +14,8 @@ const RandomArts: React.FC<TypeRandomArts> = ({ data, load }) => {
   return (
     <Container content="center">
       <StyledRandomArts>
-        <StyledRandomTitle>Here some more</StyledRandomTitle>
-        <StyledRandomInfo>Other works for you</StyledRandomInfo>
+        <StyledBlockArtTitle>Here some more</StyledBlockArtTitle>
+        <StyledBlockArtInfo>Other works for you</StyledBlockArtInfo>
         {load && <Loading />}
         <StyledRandomItems>
           {!load &&

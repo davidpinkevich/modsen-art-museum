@@ -6,14 +6,14 @@ const StyledRandomArts = styled.div`
   font-family: "Lexend Deca";
 `;
 
-const StyledRandomTitle = styled.div`
+const StyledBlockArtTitle = styled.div`
   text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: rgba(224, 164, 73, 1);
 `;
 
-const StyledRandomInfo = styled.div`
+const StyledBlockArtInfo = styled.div`
   text-align: center;
   font-size: 32px;
   line-height: 40px;
@@ -31,7 +31,7 @@ const StyledRandomItems = styled.div`
 
 export {
   StyledRandomArts,
-  StyledRandomTitle,
-  StyledRandomInfo,
+  StyledBlockArtTitle,
+  StyledBlockArtInfo,
   StyledRandomItems
 };
