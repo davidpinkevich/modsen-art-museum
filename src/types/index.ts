@@ -22,9 +22,13 @@ export interface TypeArt {
 
 export interface TypeArts {
   data: TypeArt[];
+  pagination: {
+    total_pages: number;
+  };
 }
 
-export interface TypeBlockArts extends TypeArts {
+export interface TypeBlockArts {
+  data: TypeArt[];
   load: boolean;
   type: "main" | "random" | "favorites";
 }
@@ -45,6 +49,7 @@ export interface TypeFilters {
   filter: string;
   load: boolean;
   setFilter: (value: string) => void;
+  setPage: (value: number) => void;
 }
 
 export interface TypeContext {
@@ -66,4 +71,11 @@ export interface TypeArtsBlock {
   main: ArtBlock;
   random: ArtBlock;
   favorites: ArtBlock;
+}
+
+export interface TypePagination {
+  total: number;
+  load: boolean;
+  page: number;
+  setPage: (value: number) => void;
 }
