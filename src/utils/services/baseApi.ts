@@ -14,7 +14,7 @@ class MuseumService {
     limit: number,
     filter: string,
     page: number
-  ): Promise<TypeArt[] | undefined> {
+  ): Promise<{ information: TypeArt[]; total: number } | undefined> {
     try {
       const pagination = `&limit=${limit}&page=${page}`;
       const respone = await fetch(
@@ -24,10 +24,10 @@ class MuseumService {
       const data: TypeArts = await respone.json();
       const arrayArts = data.data.map((item) => item.id);
 
-      const fullInformation = await Promise.all(
+      const information = await Promise.all(
         arrayArts.map(async (id) => await this.getFullInformation(id))
       );
-      return fullInformation;
+      return { information, total: data.pagination.total_pages };
     } catch (error) {
       console.log("Error with getting Search: ", (error as Error).message);
     }
