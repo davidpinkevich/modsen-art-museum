@@ -3,7 +3,16 @@ import { getNameFilter } from "@utils/helpers/getNameFilter";
 import { StyledFilters, StyledFiltersBtn } from "./styled";
 import { type TypeFilters } from "@src/types";
 
-const Filters: React.FC<TypeFilters> = ({ filter, setFilter, load }) => {
+const Filters: React.FC<TypeFilters> = ({
+  filter,
+  setFilter,
+  load,
+  setPage
+}) => {
+  const handlerButton = (item: string) => {
+    setFilter(item);
+    setPage(1);
+  };
   return (
     <StyledFilters>
       {FILTERS.map((item, index) => {
@@ -12,7 +21,8 @@ const Filters: React.FC<TypeFilters> = ({ filter, setFilter, load }) => {
             type={filter === item ? "active" : ""}
             key={index}
             disabled={load}
-            onClick={() => setFilter(item)}>
+            // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+            onClick={() => handlerButton(item)}>
             {getNameFilter(item)}
           </StyledFiltersBtn>
         );
