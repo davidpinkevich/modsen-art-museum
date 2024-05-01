@@ -1,27 +1,41 @@
-import { useEffect, useState } from "react";
-import { service } from "@utils/services/baseApi";
-import { RANDOM_ARTS_VIEW } from "@constants/data";
-import { getRandomPage } from "@utils/helpers/getRandomPage";
-import { Forms } from "@components/Form";
-import { RandomArts } from "@components/RandomArts";
-import { type TypeArt } from "@src/types";
+import { useHomePage } from "@hooks/useHomePage";
+import { Forms } from "@components/Forms";
+import { BlockArts } from "@components/BlockArts";
+import { Pagination } from "@components/Pagination";
 
 const Home: React.FC = () => {
-  const [randomImages, setRandomImages] = useState<TypeArt[]>([]);
-  const [loadRandom, setLoadRandom] = useState<boolean>(true);
-  console.log("randomImages: ", randomImages);
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await service.getBaseArts(RANDOM_ARTS_VIEW, getRandomPage());
-      if (data) setRandomImages(data);
-      setLoadRandom(false);
-    };
-    fetchData();
-  }, []);
+  const {
+    filter,
+    setFilter,
+    setSearch,
+    setPage,
+    randomImages,
+    page,
+    total,
+    arts,
+    loadArts,
+    loadRandom
+  } = useHomePage();
+
   return (
     <div>
-      <Forms />
-      <RandomArts data={randomImages} load={loadRandom} />
+      <Forms
+        filter={filter}
+        setFilter={setFilter}
+        setSearch={setSearch}
+        setPage={setPage}
+        load={loadArts}
+      />
+      <BlockArts data={arts} load={loadArts} type="main" />
+      {total >= 2 && (
+        <Pagination
+          load={loadArts}
+          page={page}
+          total={total}
+          setPage={setPage}
+        />
+      )}
+      <BlockArts data={randomImages} load={loadRandom} type="random" />
     </div>
   );
 };
