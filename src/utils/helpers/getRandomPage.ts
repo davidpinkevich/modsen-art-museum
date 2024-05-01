@@ -1,3 +1,5 @@
-const getRandomPage = () => Math.floor(Math.random() * 100) + 1;
+import { RANDOM_PAGES_COUNT } from "@constants/data";
+
+const getRandomPage = () => Math.floor(Math.random() * RANDOM_PAGES_COUNT) + 1;
 
 export { getRandomPage };
