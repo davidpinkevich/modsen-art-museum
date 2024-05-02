@@ -14,7 +14,7 @@ const CardInfo: React.FC<TypeCard> = ({ item }) => {
       <Link to={"./"}>
         <StyledCardTitle>{cutString(item.title)}</StyledCardTitle>
       </Link>
-      <StyledCardName>{item.artist_title}</StyledCardName>
+      <StyledCardName>{cutString(item.artist_title)}</StyledCardName>
       <StyledCardPublic>
         {item.is_public_domain ? "Public" : "Not Public"}
       </StyledCardPublic>
