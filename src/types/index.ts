@@ -29,7 +29,7 @@ export interface TypeArts {
 
 export interface TypeBlockArts {
   data: TypeArt[];
-  load: boolean;
+  load?: boolean;
   type: "main" | "random" | "favorites";
 }
 
