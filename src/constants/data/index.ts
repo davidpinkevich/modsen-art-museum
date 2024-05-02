@@ -10,6 +10,8 @@ const LENGTH_PAGINATION = 3;
 
 const LENGTH_VIEW_MAIN = 3;
 
+const LINK_MODSEN = "https://www.modsen-software.com/";
+
 const BREAKPOINTS = {
   sm: "576px",
   md: "768px",
@@ -42,5 +44,6 @@ export {
   LENGTH_PAGINATION,
   LENGTH_VIEW_MAIN,
   RANDOM_PAGES_COUNT,
-  BREAKPOINTS
+  BREAKPOINTS,
+  LINK_MODSEN
 };
