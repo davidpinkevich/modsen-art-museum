@@ -53,8 +53,6 @@ const GlobalStyles = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
-    width: 100vw;
-    overflow-x: hidden;
   }
   input,
   button,
