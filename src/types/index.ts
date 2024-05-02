@@ -79,3 +79,12 @@ export interface TypePagination {
   page: number;
   setPage: (value: number) => void;
 }
+
+export interface TypeMenu {
+  open: boolean;
+}
+
+export interface TypeBurger {
+  open: boolean;
+  setOpen: (value: boolean) => void;
+}
