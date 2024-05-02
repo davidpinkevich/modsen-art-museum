@@ -4,11 +4,18 @@ const RANDOM_ARTS_VIEW = 9;
 
 const RANDOM_PAGES_COUNT = 100;
 
-const LENGTH_TITLE = 16;
+const LENGTH_TITLE = 14;
 
 const LENGTH_PAGINATION = 3;
 
 const LENGTH_VIEW_MAIN = 3;
+
+const BREAKPOINTS = {
+  sm: "576px",
+  md: "768px",
+  lg: "992px",
+  xl: "1200px"
+};
 
 const FILTERS = ["public", "not-public", "view", "not-view"];
 
@@ -34,5 +41,6 @@ export {
   ARTS_BLOCK,
   LENGTH_PAGINATION,
   LENGTH_VIEW_MAIN,
-  RANDOM_PAGES_COUNT
+  RANDOM_PAGES_COUNT,
+  BREAKPOINTS
 };
