@@ -6,14 +6,8 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
   const isDev = options.mode === "development";
 
   const assetLoader = {
-    test: /\.(png|jpg|jpeg|gif)$/i,
+    test: /\.(png|jpg|jpeg|gif|svg|webp)$/i,
     type: "asset/resource"
-  };
-
-  const svgLoader = {
-    test: /\.svg$/i,
-    issuer: /\.[jt]sx?$/,
-    use: [{ loader: "@svgr/webpack", options: { icon: true } }]
   };
 
   const scssLoader = {
@@ -32,5 +26,11 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
       loader: "babel-loader"
     }
   };
-  return [assetLoader, scssLoader, babelLoader, svgLoader];
+
+  const fontsLoader = {
+    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+    type: "asset/resource"
+  };
+
+  return [assetLoader, scssLoader, babelLoader, fontsLoader];
 }
