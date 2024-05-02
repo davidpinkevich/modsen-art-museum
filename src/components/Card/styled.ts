@@ -21,6 +21,9 @@ const StyledCard = styled.div<{ type: string }>`
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
   }
+  &:hover {
+    transform: scale(1);
+  }
 `;
 
 const StyledCardImg = styled.img`

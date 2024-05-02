@@ -6,8 +6,11 @@ const StyledNF = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  width: 50%;
-  height: 100%;
+  width: auto;
+  height: 507px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const StyledNFImage = styled.img`
@@ -24,6 +27,9 @@ const StyledNFInfo = styled.p`
   text-align: center;
   font-size: 52px;
   font-weight: 500;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
 `;
 
 export { StyledNF, StyledNFImage, StyledNFInfo };

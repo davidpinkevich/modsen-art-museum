@@ -1,22 +1,39 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "@constants/data";
 
 const StyledFilters = styled.div`
   display: flex;
   border-radius: 16px;
   gap: 5px;
+  @media (max-width: ${BREAKPOINTS.md}) {
+    flex-direction: column;
+  }
   & button:first-child {
     border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
+    @media (max-width: ${BREAKPOINTS.md}) {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 0%;
+    }
   }
   & button:last-child {
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
+    @media (max-width: ${BREAKPOINTS.md}) {
+      border-top-right-radius: 0%;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
   }
 `;
 
 const StyledFiltersBtn = styled.button<{ type: string }>`
   text-align: center;
   padding: 16px;
+  @media (max-width: ${BREAKPOINTS.lg}) {
+    padding: 12px;
+  }
   background-color: ${(props) =>
     props.type === "active"
       ? "rgba(224, 164, 73, 1)"

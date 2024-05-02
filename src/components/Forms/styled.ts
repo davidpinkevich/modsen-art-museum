@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "@constants/data";
 
 const StyledFormBody = styled.div`
   max-width: 762px;
@@ -19,6 +20,16 @@ const StyledFormTitle = styled.h2`
   line-height: 80px;
   text-align: center;
   margin-top: 120px;
+  @media (max-width: ${BREAKPOINTS.lg}) {
+    margin-top: 80px;
+    font-size: 50px;
+    line-height: 54px;
+  }
+  @media (max-width: ${BREAKPOINTS.md}) {
+    margin-top: 30px;
+    font-size: 34px;
+    line-height: 40px;
+  }
   color: rgba(57, 57, 57, 1);
   & span {
     color: rgba(241, 121, 0, 1);

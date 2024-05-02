@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "@constants/data";
 
 const StyledInputBody = styled.div`
   width: 100%;
@@ -13,6 +14,13 @@ const StyledInput = styled.input`
   width: 100%;
   background-color: rgba(57, 57, 57, 0.05);
   transition: all 0.2s;
+  @media (max-width: ${BREAKPOINTS.lg}) {
+    padding: 16px 12px;
+    font-size: 18px;
+  }
+  @media (max-width: ${BREAKPOINTS.md}) {
+    border-radius: 10px;
+  }
   &:hover {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
   }
@@ -26,6 +34,7 @@ const StyledInput = styled.input`
   }
   &:disabled {
     opacity: 0.6;
+    pointer-events: none;
   }
 `;
 
@@ -35,6 +44,9 @@ const StyledInputImg = styled.img`
   top: 22px;
   width: 32px;
   height: 32px;
+  @media (max-width: ${BREAKPOINTS.lg}) {
+    top: 10px;
+  }
 `;
 
 const StyledValidate = styled.div`
