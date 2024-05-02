@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "@constants/data";
 
 const StyledHeader = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   width: 100%;
@@ -12,6 +14,12 @@ const StyledHeader = styled.div`
   );
   width: 100%;
   height: 127px;
+  @media (max-width: ${BREAKPOINTS.md}) {
+    height: 120px;
+  }
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    height: 80px;
+  }
 `;
 
 const StyledHeaderContainer = styled.div`

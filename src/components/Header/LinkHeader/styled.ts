@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BREAKPOINTS } from "@constants/data";
 
 const StyledLink = styled.div<{ type: string }>`
   a {
@@ -12,6 +13,15 @@ const StyledLinkImage = styled.div<{ type: string }>`
   position: relative;
   width: ${(props) => (props.type === "menu" ? "20px" : "62px")};
   height: ${(props) => (props.type === "menu" ? "20px" : "50px")};
+  @media (max-width: ${BREAKPOINTS.md}) {
+    width: ${(props) => (props.type === "menu" ? "20px" : "42px")};
+    height: ${(props) => (props.type === "menu" ? "20px" : "35px")};
+  }
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    width: ${(props) => (props.type === "menu" ? "28px" : "42px")};
+    height: ${(props) => (props.type === "menu" ? "28px" : "35px")};
+  }
+
   & img {
     position: absolute;
     top: 0;
@@ -24,7 +34,14 @@ const StyledLinkImage = styled.div<{ type: string }>`
 
 const StyledLinkTitle = styled.h2<{ type: string }>`
   font-size: ${(props) => (props.type === "menu" ? "16px" : "18px")};
+  transition: all 0.2s;
   color: white;
+  &:hover {
+    color: rgba(224, 164, 73, 1);
+  }
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    font-size: ${(props) => (props.type === "menu" ? "28px" : "18px")};
+  }
   & span {
     color: rgba(224, 164, 73, 1);
     font-weight: 600;

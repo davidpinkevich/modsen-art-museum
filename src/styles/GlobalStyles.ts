@@ -16,6 +16,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Inter';
     background-color: rgba(250,250,250,1);
+    overflow-x: hidden;  
   }
   * {
     padding: 0;
