@@ -12,7 +12,6 @@ const StyledHeader = styled.div`
     rgba(72, 72, 72, 1),
     rgba(40, 40, 40, 1)
   );
-  width: 100%;
   height: 127px;
   @media (max-width: ${BREAKPOINTS.md}) {
     height: 120px;

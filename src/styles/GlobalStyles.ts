@@ -16,7 +16,6 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Inter';
     background-color: rgba(250,250,250,1);
-    overflow-x: hidden;  
   }
   * {
     padding: 0;
@@ -54,6 +53,8 @@ const GlobalStyles = createGlobalStyle`
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    width: 100vw;
+    overflow-x: hidden;
   }
   input,
   button,

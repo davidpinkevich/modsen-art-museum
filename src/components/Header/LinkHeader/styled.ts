@@ -35,7 +35,11 @@ const StyledLinkImage = styled.div<{ type: string }>`
 const StyledLinkTitle = styled.h2<{ type: string }>`
   font-size: ${(props) => (props.type === "menu" ? "16px" : "18px")};
   transition: all 0.2s;
-  color: white;
+  color: ${(props) =>
+    props.type === "logo-footer"
+      ? "rgba(57, 57, 57, 1)"
+      : "rgba(255, 255, 255, 1)"};
+
   &:hover {
     color: rgba(224, 164, 73, 1);
   }
