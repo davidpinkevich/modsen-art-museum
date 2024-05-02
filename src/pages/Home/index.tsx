@@ -18,7 +18,7 @@ const Home: React.FC = () => {
   } = useHomePage();
 
   return (
-    <div>
+    <>
       <Forms
         filter={filter}
         setFilter={setFilter}
@@ -36,7 +36,7 @@ const Home: React.FC = () => {
         />
       )}
       <BlockArts data={randomImages} load={loadRandom} type="random" />
-    </div>
+    </>
   );
 };
 

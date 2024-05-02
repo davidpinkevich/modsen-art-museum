@@ -13,7 +13,7 @@ const Menu: React.FC = () => {
       <CustomLink img={homeImg} alt="home" path="./" type="menu">
         Home
       </CustomLink>
-      <CustomLink img={favorite} alt="favorites" path="/favorite" type="menu">
+      <CustomLink img={favorite} alt="favorites" path="favorites" type="menu">
         Your favorites
       </CustomLink>
     </StyledMenu>
