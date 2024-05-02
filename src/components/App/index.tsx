@@ -1,16 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Context } from "@constants/context";
+import { useAppContext } from "@hooks/useAppContext";
 import { MainLayout } from "@pages/MainLayout";
 import { Home } from "@pages/Home";
-import { FavoritesContext } from "@constants/context";
-import { useLocalStorage } from "@hooks/useLocalStorage";
+import { StyledApp } from "./styled";
 
 const App: React.FC = () => {
-  const [favorites, addFavorite] = useLocalStorage([], "favorites");
+  const context = useAppContext();
 
   return (
     <BrowserRouter>
-      <FavoritesContext.Provider value={{ favorites, addFavorite }}>
-        <div className="App">
+      <Context.Provider value={context}>
+        <StyledApp open={context.open}>
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
@@ -18,8 +19,8 @@ const App: React.FC = () => {
               <Route path="favorites" element={<div>favorites</div>} />
             </Route>
           </Routes>
-        </div>
-      </FavoritesContext.Provider>
+        </StyledApp>
+      </Context.Provider>
     </BrowserRouter>
   );
 };

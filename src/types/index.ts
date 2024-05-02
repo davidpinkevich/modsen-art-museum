@@ -55,6 +55,8 @@ export interface TypeFilters {
 export interface TypeContext {
   favorites: TypeArt[];
   addFavorite: (item: TypeArt) => void;
+  open: boolean;
+  setOpen: (value: boolean) => void;
 }
 
 export interface TypeCard {
@@ -78,13 +80,4 @@ export interface TypePagination {
   load: boolean;
   page: number;
   setPage: (value: number) => void;
-}
-
-export interface TypeMenu {
-  open: boolean;
-}
-
-export interface TypeBurger {
-  open: boolean;
-  setOpen: (value: boolean) => void;
 }
