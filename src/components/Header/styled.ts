@@ -6,6 +6,7 @@ const StyledHeader = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
+  z-index: 2;
   background: linear-gradient(
     to right,
     rgba(52, 51, 51, 1),

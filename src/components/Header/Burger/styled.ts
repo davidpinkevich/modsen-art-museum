@@ -4,7 +4,7 @@ import { BREAKPOINTS } from "@constants/data";
 const StyledBurger = styled.button<{ open: boolean }>`
   position: absolute;
   background-color: inherit;
-  z-index: 3;
+  z-index: 20;
   top: 26px;
   right: 20px;
   display: flex;

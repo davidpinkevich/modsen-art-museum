@@ -11,9 +11,11 @@ const StyledFooter = styled.div`
   margin-top: 120px;
   @media (max-width: ${BREAKPOINTS.md}) {
     height: 120px;
+    margin-top: 80px;
   }
   @media (max-width: ${BREAKPOINTS.sm}) {
     height: 80px;
+    margin-top: 40px;
   }
 `;
 
