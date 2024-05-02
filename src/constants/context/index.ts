@@ -1,9 +1,11 @@
 import { createContext } from "react";
-import { type TypeContext, type TypeArt } from "@src/types";
+import { type TypeContext } from "@src/types";
 
-const FavoritesContext = createContext<TypeContext>({
+const Context = createContext<TypeContext>({
   favorites: [],
-  addFavorite: (item: TypeArt) => {}
+  addFavorite: () => {},
+  open: false,
+  setOpen: () => {}
 });
 
-export { FavoritesContext };
+export { Context };
