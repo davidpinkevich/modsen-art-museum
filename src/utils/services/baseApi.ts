@@ -1,5 +1,6 @@
 import { getFilter } from "@utils/helpers/getFilter";
 import { getSearch } from "@utils/helpers/getSearch";
+import { createImages } from "../helpers/createImages";
 import { type TypeArt, type TypeArts } from "@src/types";
 
 class MuseumService {
@@ -27,7 +28,10 @@ class MuseumService {
       const information = await Promise.all(
         arrayArts.map(async (id) => await this.getFullInformation(id))
       );
-      return { information, total: data.pagination.total_pages };
+      return {
+        information: createImages(information),
+        total: data.pagination.total_pages
+      };
     } catch (error) {
       console.log("Error with getting Search: ", (error as Error).message);
     }
@@ -41,11 +45,9 @@ class MuseumService {
       const respone = await fetch(
         `${process.env.BASE_URL}?limit=${limit}&page=${page}`
       );
-
       const result: TypeArts = await respone.json();
-      console.log("result: ", result.data);
 
-      return result.data;
+      return createImages(result.data);
     } catch (error) {
       console.log("Error with getting Arts: ", (error as Error).message);
     }
