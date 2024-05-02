@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { StyledLink, StyledLinkImage, StyledLinkTitle } from "./styled";
 import { type TypeLinkHeader } from "@src/types";
 
-const LinkHeader: React.FC<TypeLinkHeader> = (props) => {
+const CustomLink: React.FC<TypeLinkHeader> = (props) => {
   return (
     <StyledLink type={props.type}>
       <Link to={props.path}>
@@ -15,4 +15,4 @@ const LinkHeader: React.FC<TypeLinkHeader> = (props) => {
   );
 };
 
-export { LinkHeader };
+export { CustomLink };
