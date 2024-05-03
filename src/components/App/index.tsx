@@ -3,6 +3,7 @@ import { Context } from "@constants/context";
 import { useAppContext } from "@hooks/useAppContext";
 import { MainLayout } from "@pages/MainLayout";
 import { Home } from "@pages/Home";
+import { DetailInfo } from "@pages/DetailInfo";
 import { Favorites } from "@pages/Favorites";
 import { StyledApp } from "./styled";
 
@@ -16,7 +17,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
-              <Route path="detail" element={<div>detail</div>} />
+              <Route path="detail-info/:id" element={<DetailInfo />} />
               <Route path="favorites" element={<Favorites />} />
             </Route>
           </Routes>
