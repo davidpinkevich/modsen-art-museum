@@ -2,6 +2,8 @@ const getNotFound = (value: string) => {
   switch (value) {
     case "main":
       return "Arts not found";
+    case "random":
+      return "Random arts not found";
     case "detail":
       return "This kind of art doesn't exist";
     case "favorites":

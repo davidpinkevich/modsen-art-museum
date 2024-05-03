@@ -5,9 +5,13 @@ import { type TypeArt, type TypeArts } from "@src/types";
 
 class MuseumService {
   async getFullInformation(id: string) {
-    const respone = await fetch(`${process.env.BASE_URL}/${id}`);
-    const result: { data: TypeArt } = await respone.json();
-    return result.data;
+    try {
+      const respone = await fetch(`${process.env.BASE_URL}/${id}`);
+      const result: { data: TypeArt } = await respone.json();
+      return result.data;
+    } catch (error) {
+      console.log("Error with getting details: ", (error as Error).message);
+    }
   }
 
   async getArtsSearch(

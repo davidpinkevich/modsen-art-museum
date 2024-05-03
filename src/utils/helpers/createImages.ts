@@ -6,13 +6,18 @@ const createImage = (src: string | null) => {
     : null;
 };
 
-const createImages = (items: TypeArt[]) => {
-  return items.map((item) => {
-    return {
-      ...item,
-      image_id: createImage(item.image_id)
-    };
-  });
+const createImages = (items: (TypeArt | undefined)[]) => {
+  return items
+    .map((item) => {
+      if (item) {
+        return {
+          ...item,
+          image_id: createImage(item.image_id)
+        };
+      }
+      return null;
+    })
+    .filter((item) => item !== null) as TypeArt[];
 };
 
 export { createImage, createImages };
