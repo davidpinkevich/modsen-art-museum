@@ -4,7 +4,7 @@ import { createImages } from "../helpers/createImages";
 import { type TypeArt, type TypeArts } from "@src/types";
 
 class MuseumService {
-  async getFullInformation(id: number) {
+  async getFullInformation(id: string) {
     const respone = await fetch(`${process.env.BASE_URL}/${id}`);
     const result: { data: TypeArt } = await respone.json();
     return result.data;
@@ -26,7 +26,7 @@ class MuseumService {
       const arrayArts = data.data.map((item) => item.id);
 
       const information = await Promise.all(
-        arrayArts.map(async (id) => await this.getFullInformation(id))
+        arrayArts.map(async (id) => await this.getFullInformation(String(id)))
       );
       return {
         information: createImages(information),
