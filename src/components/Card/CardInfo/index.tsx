@@ -11,7 +11,7 @@ import { type TypeCard } from "@src/types";
 const CardInfo: React.FC<TypeCard> = ({ item }) => {
   return (
     <StyledCardInfo>
-      <Link to={"./"}>
+      <Link to={`/detail-info/${item.id}`}>
         <StyledCardTitle>{cutString(item.title)}</StyledCardTitle>
       </Link>
       <StyledCardName>{cutString(item.artist_title)}</StyledCardName>
