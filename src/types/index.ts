@@ -10,6 +10,9 @@ export interface TypeArt {
   id: number;
   artist_title: string;
   artwork_type_title: string;
+  credit_line: string;
+  place_of_origin: string;
+  date_display: string;
   copyright_notice: string;
   title: string;
   date_start: number;
@@ -80,4 +83,8 @@ export interface TypePagination {
   load: boolean;
   page: number;
   setPage: (value: number) => void;
+}
+
+export interface TypeNotFound {
+  type: string;
 }
