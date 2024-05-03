@@ -1,6 +1,5 @@
 import { memo } from "react";
 import { ARTS_BLOCK } from "@constants/data";
-import { createImages } from "@utils/helpers/createImages";
 import { Loading } from "../Loading";
 import { Card } from "../Card";
 import { NotFound } from "../NotFound";
@@ -25,7 +24,7 @@ const BlockArts: React.FC<TypeBlockArts> = memo(
             {load && <Loading />}
             {!!data.length && !load && (
               <StyledBlockItems type={type}>
-                {createImages(data).map((item) => (
+                {data.map((item) => (
                   <Card key={item.id} item={item} type={type} />
                 ))}
               </StyledBlockItems>

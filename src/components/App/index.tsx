@@ -3,6 +3,7 @@ import { Context } from "@constants/context";
 import { useAppContext } from "@hooks/useAppContext";
 import { MainLayout } from "@pages/MainLayout";
 import { Home } from "@pages/Home";
+import { Favorites } from "@pages/Favorites";
 import { StyledApp } from "./styled";
 
 const App: React.FC = () => {
@@ -16,7 +17,7 @@ const App: React.FC = () => {
             <Route path="/" element={<MainLayout />}>
               <Route index element={<Home />} />
               <Route path="detail" element={<div>detail</div>} />
-              <Route path="favorites" element={<div>favorites</div>} />
+              <Route path="favorites" element={<Favorites />} />
             </Route>
           </Routes>
         </StyledApp>
