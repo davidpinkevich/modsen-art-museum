@@ -8,6 +8,7 @@ const StyledNF = styled.div<{ type: string }>`
   align-items: center;
   width: auto;
   height: 507px;
+  padding: 20px;
   margin-top: ${(props) => (props.type === "detail" ? "10%" : "0px")};
   @media (max-width: 768px) {
     width: 100%;
