@@ -29,7 +29,7 @@ const BlockArts: React.FC<TypeBlockArts> = memo(
                 ))}
               </StyledBlockItems>
             )}
-            {!data.length && !load && <NotFound />}
+            {!data.length && !load && <NotFound type={type} />}
           </StyledItemsWrap>
         </StyledBlockArts>
       </Container>
