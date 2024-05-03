@@ -1,15 +1,18 @@
 import { type TypeArt } from "@src/types";
 
+const createImage = (src: string | null) => {
+  return src
+    ? `${process.env.BASE_URL_IMAGES}${src}/full/400,/0/default.jpg`
+    : null;
+};
+
 const createImages = (items: TypeArt[]) => {
   return items.map((item) => {
-    const url = item.image_id
-      ? `${process.env.BASE_URL_IMAGES}${item.image_id}/full/400,/0/default.jpg`
-      : null;
     return {
       ...item,
-      image_id: url
+      image_id: createImage(item.image_id)
     };
   });
 };
 
-export { createImages };
+export { createImage, createImages };
