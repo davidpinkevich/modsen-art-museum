@@ -1,16 +1,16 @@
 import { CardButton } from "@components/Card/CardButton";
 import { createImage } from "@utils/helpers/createImages";
 import { StyledDetailWrap, StyledDetailImg, StyledDetailBtn } from "./styled";
-import { TypeArt } from "@src/types";
+import { type TypeArt } from "@src/types";
 
 const DetailCardImg: React.FC<TypeArt> = (props) => {
-  const image_id = createImage(props.image_id);
+  const image = createImage(props.image_id);
 
   return (
     <StyledDetailWrap>
-      <StyledDetailImg src={image_id ?? ""} />
+      <StyledDetailImg src={image ?? ""} />
       <StyledDetailBtn>
-        <CardButton item={{ ...props, image_id }} />
+        <CardButton item={{ ...props, image_id: image }} />
       </StyledDetailBtn>
     </StyledDetailWrap>
   );

@@ -6,7 +6,7 @@ const createImage = (src: string | null) => {
     : null;
 };
 
-const createImages = (items: (TypeArt | undefined)[]) => {
+const createImages = (items: Array<TypeArt | undefined>) => {
   return items
     .map((item) => {
       if (item) {

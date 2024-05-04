@@ -9,7 +9,7 @@ class ErrorBoundary extends Component<
   TypeErrorBoundaryProps,
   TypeErrorBoundaryState
 > {
-  constructor(props: {}) {
+  constructor(props: TypeErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, info: "" };
   }

@@ -6,7 +6,7 @@ import {
   StyledInfoDate,
   StyledInfoString
 } from "./styled";
-import { TypeArt } from "@src/types";
+import { type TypeArt } from "@src/types";
 
 const DetailCardInfo: React.FC<TypeArt> = (props) => {
   return (

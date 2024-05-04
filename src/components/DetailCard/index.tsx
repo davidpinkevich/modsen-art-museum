@@ -1,7 +1,7 @@
 import { DetailCardImg } from "./DetailCardImg";
 import { DetailCardInfo } from "./DetailCardInfo";
 import { StyledDetail } from "./styled";
-import { TypeArt } from "@src/types";
+import { type TypeArt } from "@src/types";
 
 const DetailCard: React.FC<TypeArt> = (props) => {
   return (
