@@ -2,11 +2,16 @@ export interface BuildPaths {
   entry: string;
   html: string;
   output: string;
+  src: string;
   assets: string;
+  mocks: string;
+  hooks: string;
+  services: string;
   components: string;
   constants: string;
   pages: string;
   utils: string;
+  styles: string;
 }
 
 export type BuildMode = "production" | "development";
