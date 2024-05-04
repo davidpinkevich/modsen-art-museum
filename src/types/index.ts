@@ -15,12 +15,10 @@ export interface TypeArt {
   credit_line: string;
   place_of_origin: string;
   date_display: string;
-  copyright_notice: string;
   title: string;
   date_start: number;
   date_end: number;
   dimensions: string;
-  description: string;
   is_public_domain: boolean;
   image_id: string | null;
 }
