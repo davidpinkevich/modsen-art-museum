@@ -8,10 +8,12 @@ import { type TypeCard } from "@src/types";
 const Card: React.FC<TypeCard> = ({ item, type = "main" }) => {
   return (
     <StyledCardWrapper type={type}>
-      {type === "main" && <StyledCardImg src={item.image_id ?? template} />}
+      <Link to={`/detail-info/${item.id}`}>
+        {type === "main" && <StyledCardImg src={item.image_id ?? template} />}
+      </Link>
       <StyledCard type={type}>
         {type !== "main" && (
-          <Link to={"/"}>
+          <Link to={`/detail-info/${item.id}`}>
             <img width={80} height={80} src={item.image_id ?? template} />
           </Link>
         )}
