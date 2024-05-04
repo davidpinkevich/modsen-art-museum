@@ -24,4 +24,8 @@ const StyledMenu = styled.div<{ open: boolean }>`
   }
 `;
 
-export { StyledMenu };
+const StyledMenuBtn = styled.button`
+  background-color: inherit;
+`;
+
+export { StyledMenu, StyledMenuBtn };
