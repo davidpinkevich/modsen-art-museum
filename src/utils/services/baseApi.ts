@@ -4,10 +4,16 @@ import { createImages } from "../helpers/createImages";
 import { type TypeArt, type TypeArts } from "@src/types";
 
 class MuseumService {
-  async getFullInformation(id: number) {
-    const respone = await fetch(`${process.env.BASE_URL}/${id}`);
-    const result: { data: TypeArt } = await respone.json();
-    return result.data;
+  async getFullInformation(id: string) {
+    try {
+      const respone = await fetch(`${process.env.BASE_URL}/${id}`);
+      const result: { data: TypeArt; status?: number; error?: string } =
+        await respone.json();
+      if (result.status === 400) throw new Error(result.error);
+      return result.data;
+    } catch (error) {
+      console.log("Error with getting details: ", (error as Error).message);
+    }
   }
 
   async getArtsSearch(
@@ -26,7 +32,7 @@ class MuseumService {
       const arrayArts = data.data.map((item) => item.id);
 
       const information = await Promise.all(
-        arrayArts.map(async (id) => await this.getFullInformation(id))
+        arrayArts.map(async (id) => await this.getFullInformation(String(id)))
       );
       return {
         information: createImages(information),

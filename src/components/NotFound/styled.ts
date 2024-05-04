@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledNF = styled.div`
+const StyledNF = styled.div<{ type: string }>`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -8,6 +8,8 @@ const StyledNF = styled.div`
   align-items: center;
   width: auto;
   height: 507px;
+  padding: 20px;
+  margin-top: ${(props) => (props.type === "detail" ? "10%" : "0px")};
   @media (max-width: 768px) {
     width: 100%;
   }
@@ -27,6 +29,7 @@ const StyledNFInfo = styled.p`
   text-align: center;
   font-size: 52px;
   font-weight: 500;
+  color: rgba(57, 57, 57, 1);
   @media (max-width: 768px) {
     font-size: 30px;
   }
