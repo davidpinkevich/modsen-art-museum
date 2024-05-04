@@ -1,7 +1,7 @@
 const debounce = (
   funcOne: (value: string) => void,
   funcTwo: (value: number) => void,
-  delay: number = 750
+  delay: number = 1000
 ) => {
   let timer: number | null = null;
 
