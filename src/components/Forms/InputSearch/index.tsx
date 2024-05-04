@@ -1,5 +1,3 @@
-import React, { type ChangeEventHandler, useEffect } from "react";
-import { useField, useFormikContext } from "formik";
 import {
   StyledInputBody,
   StyledInput,
@@ -7,26 +5,10 @@ import {
   StyledInputImg
 } from "./styled";
 import glass from "@assets/icons/glass.svg";
-import { type TypeForm } from "@src/types";
 
+import { useInput } from "@hooks/useInput";
 const InputSearch: React.FC<{ load: boolean }> = ({ load }) => {
-  const { isValid, handleSubmit } = useFormikContext<TypeForm>();
-  const [field, meta, helpers] = useField("searh");
-
-  const { value, onChange } = field;
-  const { error, touched } = meta;
-
-  const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-    helpers.setTouched(true).catch((e) => e);
-    onChange(e);
-  };
-
-  useEffect(() => {
-    if (!touched || !isValid) return;
-
-    handleSubmit();
-    helpers.setTouched(false).catch((e) => e);
-  }, [isValid, handleSubmit, touched]);
+  const { value, error, handleChange } = useInput();
 
   return (
     <StyledInputBody>
