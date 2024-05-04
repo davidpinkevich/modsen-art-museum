@@ -1,4 +1,5 @@
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import { App } from "@components/App";
 import { GlobalStyles } from "@styles/GlobalStyles";
 
@@ -9,8 +10,8 @@ if (root === null) {
 }
 
 createRoot(root).render(
-  <>
+  <BrowserRouter>
     <GlobalStyles />
     <App />
-  </>
+  </BrowserRouter>
 );

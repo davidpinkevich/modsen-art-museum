@@ -8,6 +8,7 @@ const StyledLink = styled.div<{ type: string }>`
     gap: 5px;
     @media (max-width: ${BREAKPOINTS.sm}) {
       margin-top: ${(props) => (props.type === "logo-footer" ? "5px" : "auto")};
+      pointer-events: ${(props) => (props.type === "logo" ? "none" : "auto")};
     }
   }
 `;

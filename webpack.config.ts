@@ -15,6 +15,7 @@ export default (env: EnvVariables) => {
     html: path.resolve(__dirname, "public", "index.html"),
     src: path.resolve(__dirname, "src"),
     assets: path.resolve(__dirname, "src", "assets"),
+    mocks: path.resolve(__dirname, "mocks"),
     hooks: path.resolve(__dirname, "src", "hooks"),
     styles: path.resolve(__dirname, "src", "styles"),
     services: path.resolve(__dirname, "src", "services"),

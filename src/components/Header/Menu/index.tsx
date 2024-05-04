@@ -3,19 +3,26 @@ import { Context } from "@constants/context";
 import { CustomLink } from "@components/CustomLink";
 import homeImg from "@assets/icons/home.svg";
 import favorite from "@assets/icons/favorite.svg";
-import { StyledMenu } from "./styled";
+import { StyledMenu, StyledMenuBtn } from "./styled";
 
 const Menu: React.FC = () => {
-  const { open } = useContext(Context);
+  const { open, setOpen } = useContext(Context);
+  const handlerMenu = () => {
+    setOpen(false);
+  };
 
   return (
     <StyledMenu open={open}>
-      <CustomLink img={homeImg} alt="home" path="./" type="menu">
-        Home
-      </CustomLink>
-      <CustomLink img={favorite} alt="favorites" path="favorites" type="menu">
-        Your favorites
-      </CustomLink>
+      <StyledMenuBtn onClick={handlerMenu}>
+        <CustomLink img={homeImg} alt="home" path="./" type="menu">
+          Home
+        </CustomLink>
+      </StyledMenuBtn>
+      <StyledMenuBtn onClick={handlerMenu}>
+        <CustomLink img={favorite} alt="favorites" path="favorites" type="menu">
+          Your favorites
+        </CustomLink>
+      </StyledMenuBtn>
     </StyledMenu>
   );
 };

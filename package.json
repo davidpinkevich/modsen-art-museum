@@ -9,7 +9,7 @@
     "start": "webpack serve --env mode=development",
     "build:dev": "webpack --env mode=development",
     "build:prod": "webpack --env mode=production",
-    "lint": "eslint .",
+    "lint": "eslint ./src",
     "test": "jest",
     "lint:fix": "eslint --fix --ext .ts,.tsx ./src",
     "prettier": "prettier --write ./src",

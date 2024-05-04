@@ -9,6 +9,7 @@ export function buildResolvers(
       "@src": options.paths.src,
       "@assets": options.paths.assets,
       "@components": options.paths.components,
+      "@mocks": options.paths.mocks,
       "@styles": options.paths.styles,
       "@hooks": options.paths.hooks,
       "@services": options.paths.services,

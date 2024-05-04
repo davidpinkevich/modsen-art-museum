@@ -17,7 +17,7 @@ const StyledNF = styled.div<{ type: string }>`
 
 const StyledNFImage = styled.img`
   position: absolute;
-  top: 0;
+  bottom: 35px;
   right: 0;
   width: 100%;
   height: 100%;

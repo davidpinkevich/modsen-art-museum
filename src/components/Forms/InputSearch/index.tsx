@@ -7,7 +7,7 @@ import {
 import glass from "@assets/icons/glass.svg";
 
 import { useInput } from "@hooks/useInput";
-const InputSearch: React.FC<{ load: boolean }> = ({ load }) => {
+const InputSearch: React.FC = () => {
   const { value, error, handleChange } = useInput();
 
   return (
@@ -15,7 +15,6 @@ const InputSearch: React.FC<{ load: boolean }> = ({ load }) => {
       <StyledInput
         type="text"
         name="searh"
-        disabled={load}
         placeholder="Search art, artist, work..."
         onChange={handleChange}
         value={value}
