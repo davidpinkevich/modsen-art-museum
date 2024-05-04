@@ -1,3 +1,5 @@
+import { type ReactNode } from "react";
+
 export interface TypeLinkHeader {
   path: string;
   img: string;
@@ -87,4 +89,17 @@ export interface TypePagination {
 
 export interface TypeNotFound {
   type: string;
+}
+
+export interface TypeFallback {
+  logger: string;
+}
+
+export interface TypeErrorBoundaryProps {
+  children?: ReactNode;
+}
+
+export interface TypeErrorBoundaryState {
+  hasError: boolean;
+  info: string;
 }
