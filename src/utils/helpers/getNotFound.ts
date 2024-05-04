@@ -8,6 +8,8 @@ const getNotFound = (value: string) => {
       return "This kind of art doesn't exist";
     case "favorites":
       return "Favorites list is empty";
+    case "page":
+      return "This page not found";
   }
 };
 
