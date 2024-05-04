@@ -15,6 +15,7 @@
       "@src*": ["./src*"],
       "@assets/*": ["./src/assets/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@mocks/*": ["./mocks/*"],
       "@components/*": ["./src/components/*"],
       "@styles/*": ["./src/styles/*"],
       "@services/*": ["./src/services/*"],
