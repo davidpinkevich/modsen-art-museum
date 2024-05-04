@@ -7,7 +7,9 @@ class MuseumService {
   async getFullInformation(id: string) {
     try {
       const respone = await fetch(`${process.env.BASE_URL}/${id}`);
-      const result: { data: TypeArt } = await respone.json();
+      const result: { data: TypeArt; status?: number; error?: string } =
+        await respone.json();
+      if (result.status === 400) throw new Error(result.error);
       return result.data;
     } catch (error) {
       console.log("Error with getting details: ", (error as Error).message);
