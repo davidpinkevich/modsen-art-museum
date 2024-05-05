@@ -18,7 +18,7 @@ const Forms: React.FC<TypeForms> = memo((props) => {
         </StyledFormTitle>
         <Formik {...config}>
           <StyledForm>
-            <InputSearch load={props.load} />
+            <InputSearch />
           </StyledForm>
         </Formik>
         <Filters
