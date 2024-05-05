@@ -9,7 +9,7 @@ const StyledInputBody = styled.div`
 const StyledInput = styled.input`
   padding: 24px 16px;
   border-radius: 16px;
-  color: black;
+  color: rgba(0, 0, 0, 0.75);
   font-size: 20px;
   width: 100%;
   background-color: rgba(57, 57, 57, 0.05);
