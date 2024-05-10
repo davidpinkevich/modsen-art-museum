@@ -21,7 +21,6 @@ const Filters: React.FC<TypeFilters> = ({
             type={filter === item ? "active" : ""}
             key={index}
             disabled={load}
-            // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
             onClick={() => handlerButton(item)}>
             {getNameFilter(item)}
           </StyledFiltersBtn>

@@ -41,7 +41,6 @@ const Pagination: React.FC<TypePagination> = ({
           disabled={load}
           type={item === page ? "active" : "base"}
           key={index}
-          // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
           onClick={() => handlerChange(item)}>
           {item}
         </StyledPaginationBtn>
