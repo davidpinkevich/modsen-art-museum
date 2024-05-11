@@ -17,13 +17,14 @@ const StyledNF = styled.div<{ type: string }>`
   }
 `;
 
-const StyledNFImage = styled.img`
+const StyledNFImage = styled.img<{ type: string }>`
   position: absolute;
   bottom: 35px;
   right: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  bottom: ${(props) => (props.type === "error" ? "65px" : "35px")};
 `;
 
 const StyledNFInfo = styled.p`

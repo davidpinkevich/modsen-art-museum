@@ -10,7 +10,7 @@ const DetailInfo: React.FC = () => {
   return (
     <Container content="center">
       {art && <DetailCard {...art} />}
-      {!art && !loadArt && <NotFound type="detail" />}
+      {!art && !loadArt && <NotFound type="error" />}
       {loadArt && <Loading />}
     </Container>
   );

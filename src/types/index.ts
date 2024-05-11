@@ -31,7 +31,7 @@ export interface TypeArts {
 }
 
 export interface TypeBlockArts {
-  data: TypeArt[];
+  data: TypeArt[] | undefined;
   load?: boolean;
   type: "main" | "random" | "favorites";
 }

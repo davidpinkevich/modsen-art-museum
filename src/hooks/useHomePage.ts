@@ -5,7 +5,7 @@ import { service } from "@utils/services/baseApi";
 import { type TypeArt } from "@src/types";
 
 const useHomePage = () => {
-  const [arts, setArts] = useState<TypeArt[]>([]);
+  const [arts, setArts] = useState<TypeArt[] | undefined>();
   const [loadArts, setLoadArts] = useState<boolean>(true);
 
   const [filter, setFilter] = useState<string>("public");
@@ -14,7 +14,7 @@ const useHomePage = () => {
   const [total, setTotal] = useState<number>(0);
   const [page, setPage] = useState<number>(1);
 
-  const [randomImages, setRandomImages] = useState<TypeArt[]>([]);
+  const [randomImages, setRandomImages] = useState<TypeArt[] | undefined>([]);
   const [loadRandom, setLoadRandom] = useState<boolean>(true);
 
   useEffect(() => {
@@ -26,10 +26,9 @@ const useHomePage = () => {
         filter,
         page
       );
-      if (data) {
-        setArts(data.information);
-        setTotal(data.total);
-      }
+      setArts(data?.information);
+      if (data) setTotal(data.total);
+
       setLoadArts(false);
     };
     fetchData();
@@ -38,7 +37,7 @@ const useHomePage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const data = await service.getBaseArts(RANDOM_ARTS_VIEW, getRandomPage());
-      if (data) setRandomImages(data);
+      setRandomImages(data);
       setLoadRandom(false);
     };
     fetchData();

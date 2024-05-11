@@ -22,14 +22,16 @@ const BlockArts: React.FC<TypeBlockArts> = memo(
           <StyledBlockArtInfo>{ARTS_BLOCK[type].info}</StyledBlockArtInfo>
           <StyledItemsWrap type={type}>
             {load && <Loading />}
-            {!!data.length && !load && (
+            {data && !!data.length && !load && (
               <StyledBlockItems type={type}>
                 {data.map((item) => (
                   <Card key={item.id} item={item} type={type} />
                 ))}
               </StyledBlockItems>
             )}
-            {!data.length && !load && <NotFound type={type} />}
+            {!data?.length && !load && (
+              <NotFound type={data ? "main" : "error"} />
+            )}
           </StyledItemsWrap>
         </StyledBlockArts>
       </Container>

@@ -27,7 +27,7 @@ const Home: React.FC = () => {
         load={loadArts}
       />
       <BlockArts data={arts} load={loadArts} type="main" />
-      {total >= 2 && Boolean(arts.length) && (
+      {total >= 2 && arts && Boolean(arts.length) && (
         <Pagination
           load={loadArts}
           page={page}

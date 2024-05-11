@@ -6,12 +6,14 @@ const createImage = (src: string | null) => {
 };
 
 const createImages = (items: Array<TypeArt | undefined>) => {
-  return items
-    .filter((item): item is TypeArt => item !== undefined)
-    .map((item) => ({
-      ...item,
-      image_id: createImage(item.image_id)
-    }));
+  const arr = items.filter((item): item is TypeArt => item !== undefined);
+  if (items && arr.length === 0 && items.length > arr.length) {
+    return undefined;
+  }
+  return arr.map((item) => ({
+    ...item,
+    image_id: createImage(item.image_id)
+  }));
 };
 
 export { createImage, createImages };

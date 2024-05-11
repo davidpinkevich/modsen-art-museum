@@ -21,7 +21,9 @@ class MuseumService {
     limit: number,
     filter: string,
     page: number
-  ): Promise<{ information: TypeArt[]; total: number } | undefined> {
+  ): Promise<
+    { information: TypeArt[] | undefined; total: number } | undefined
+  > {
     try {
       const pagination = `&limit=${limit}&page=${page}`;
       const respone = await fetch(
@@ -34,6 +36,7 @@ class MuseumService {
       const information = await Promise.all(
         arrayArts.map(async (id) => await this.getFullInformation(String(id)))
       );
+
       return {
         information: createImages(information),
         total: data.pagination.total_pages
@@ -49,7 +52,7 @@ class MuseumService {
   ): Promise<TypeArt[] | undefined> {
     try {
       const respone = await fetch(
-        `${process.env.BASE_URL}?limit=${limit}&page=${page}`
+        `${process.env.BASE_UsdRL}?limit=${limit}&page=${page}`
       );
       const result: TypeArts = await respone.json();
 
