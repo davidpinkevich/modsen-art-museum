@@ -1,30 +1,39 @@
 import { LENGTH_PAGINATION } from "@constants/data";
 
+const createDefaultArray = (pages: number) => {
+  const array = new Array(
+    pages >= LENGTH_PAGINATION ? LENGTH_PAGINATION : pages
+  );
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] = i + 1;
+  }
+  return array;
+};
+
 const createArrayPagination = (
   arrayCurrent: number[],
   current: number,
   pages: number
 ) => {
-  const array = new Array(pages >= 3 ? LENGTH_PAGINATION : pages);
+  const array = createDefaultArray(pages);
+
   if (!arrayCurrent.length || array.length !== arrayCurrent.length) {
-    for (let i = 0; i < array.length; i += 1) {
-      array[i] = i + 1;
-    }
     return array;
-  } else if (arrayCurrent.length && current <= pages && current >= 1) {
-    if (arrayCurrent.filter((item) => item === current).length) {
-      return arrayCurrent;
-    } else if (arrayCurrent[arrayCurrent.length - 1] + 1 === current) {
-      return arrayCurrent.map((item) => item + 1);
-    } else if (arrayCurrent[0] - 1 === current) {
-      return arrayCurrent.map((item) => item - 1);
-    } else {
-      for (let i = 0; i < array.length; i += 1) {
-        array[i] = i + 1;
-      }
-      return array;
-    }
   }
+
+  if (arrayCurrent.includes(current)) {
+    return arrayCurrent;
+  }
+
+  if (arrayCurrent[arrayCurrent.length - 1] + 1 === current) {
+    return arrayCurrent.map((item) => item + 1);
+  }
+
+  if (arrayCurrent[0] - 1 === current) {
+    return arrayCurrent.map((item) => item - 1);
+  }
+
+  return array;
 };
 
 const changePage = (
