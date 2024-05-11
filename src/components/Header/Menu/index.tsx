@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context } from "@constants/context";
+import { LINK_PATH } from "@constants/data";
 import { CustomLink } from "@components/CustomLink";
 import homeImg from "@assets/icons/home.svg";
 import favorite from "@assets/icons/favorite.svg";
@@ -14,12 +15,16 @@ const Menu: React.FC = () => {
   return (
     <StyledMenu open={open}>
       <StyledMenuBtn onClick={handlerMenu}>
-        <CustomLink img={homeImg} alt="home" path="./" type="menu">
+        <CustomLink img={homeImg} alt="home" path={LINK_PATH.BASE} type="menu">
           Home
         </CustomLink>
       </StyledMenuBtn>
       <StyledMenuBtn onClick={handlerMenu}>
-        <CustomLink img={favorite} alt="favorites" path="favorites" type="menu">
+        <CustomLink
+          img={favorite}
+          alt="favorites"
+          path={LINK_PATH.FAVORITES}
+          type="menu">
           Your favorites
         </CustomLink>
       </StyledMenuBtn>
