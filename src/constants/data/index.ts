@@ -10,6 +10,8 @@ const LENGTH_PAGINATION = 3;
 
 const LENGTH_VIEW_MAIN = 3;
 
+const DEFAULT_SCREEN = 400;
+
 const LINK_MODSEN = "https://www.modsen-software.com/";
 
 const BREAKPOINTS = {
@@ -36,6 +38,14 @@ const ARTS_BLOCK: TypeArtsBlock = {
   }
 };
 
+const QUERY_IMAGE = `/full/${DEFAULT_SCREEN},/0/default.jpg`;
+
+const LINK_PATH = {
+  BASE: "./",
+  DETAIL: "detail-info",
+  FAVORITES: "favorites"
+};
+
 export {
   RANDOM_ARTS_VIEW,
   LENGTH_TITLE,
@@ -45,5 +55,7 @@ export {
   LENGTH_VIEW_MAIN,
   RANDOM_PAGES_COUNT,
   BREAKPOINTS,
-  LINK_MODSEN
+  LINK_MODSEN,
+  QUERY_IMAGE,
+  LINK_PATH
 };
