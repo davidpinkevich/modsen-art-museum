@@ -3,8 +3,8 @@ import { debounce } from "@utils/helpers/debounce";
 import { validateSchema } from "@utils/helpers/validate";
 import { type TypeForm, type TypeForms } from "@src/types";
 
-const useForms = (props: TypeForms) => {
-  const getDebounceValue = debounce(props.setSearch, props.setPage);
+const useForms = ({ setSearch, setPage }: TypeForms) => {
+  const getDebounceValue = debounce(setSearch, setPage);
   const onSubmit = (values: TypeForm) => {
     getDebounceValue(values.searh);
   };

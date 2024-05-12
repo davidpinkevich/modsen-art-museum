@@ -8,33 +8,42 @@ import {
 } from "./styled";
 import { type TypeArt } from "@src/types";
 
-const DetailCardInfo: React.FC<TypeArt> = (props) => {
+const DetailCardInfo: React.FC<TypeArt> = ({
+  title,
+  artist_title,
+  date_start,
+  date_end,
+  date_display,
+  dimensions,
+  credit_line,
+  place_of_origin,
+  is_public_domain
+}) => {
   return (
     <StyledDetailCardInfo>
       <StyledInfoBlock>
-        <StyledInfoTitle>{props.title}</StyledInfoTitle>
-        <StyledInfoName>{props.artist_title}</StyledInfoName>
+        <StyledInfoTitle>{title}</StyledInfoTitle>
+        <StyledInfoName>{artist_title}</StyledInfoName>
         <StyledInfoDate>
-          {props.date_start}-{props.date_end}
+          {date_start}-{date_end}
         </StyledInfoDate>
       </StyledInfoBlock>
       <StyledInfoBlock>
         <StyledInfoTitle>Overview</StyledInfoTitle>
         <StyledInfoString>
-          Additional information about the period:{" "}
-          <span>{props.date_display}</span>
+          Additional information about the period: <span>{date_display}</span>
         </StyledInfoString>
         <StyledInfoString>
-          Dimensions: <span>{props.dimensions}</span>
+          Dimensions: <span>{dimensions}</span>
         </StyledInfoString>
         <StyledInfoString>
-          Credit Line: <span>{props.credit_line}</span>
+          Credit Line: <span>{credit_line}</span>
         </StyledInfoString>
         <StyledInfoString>
-          Place of origin: <span>{props.place_of_origin}</span>
+          Place of origin: <span>{place_of_origin}</span>
         </StyledInfoString>
         <StyledInfoString>
-          <span>{props.is_public_domain ? "Public" : "Not public"}</span>
+          <span>{is_public_domain ? "Public" : "Not public"}</span>
         </StyledInfoString>
       </StyledInfoBlock>
     </StyledDetailCardInfo>
