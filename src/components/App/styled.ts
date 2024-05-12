@@ -3,15 +3,19 @@ import { BREAKPOINTS } from "@constants/data";
 
 const StyledApp = styled.div<{ open: boolean }>`
   @media (max-width: ${BREAKPOINTS.sm}) {
+    position: ${(props) => (props.open ? "fixed" : "relative")};
+    top: 0;
+    right: 0;
     overflow: hidden;
-    height: ${(props) => (props.open ? "100vh" : "auto")};
+    width: 100%;
+    height: 100%;
     &:after {
       content: "";
-      position: absolute;
+      position: fixed;
       top: 0;
-      left: 0;
-      width: ${(props) => (props.open ? "100vw" : "none")};
-      height: ${(props) => (props.open ? "100vh" : "none")};
+      right: 0;
+      width: ${(props) => (props.open ? "100%" : "none")};
+      height: ${(props) => (props.open ? "100%" : "none")};
       background-color: rgba(0, 0, 0, 0.3);
     }
   }
