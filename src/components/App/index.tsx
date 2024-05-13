@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { Context } from "@constants/context";
-import { useAppContext } from "@hooks/useAppContext";
+import { useLocalStorage } from "@hooks/useLocalStorage";
 import { MainLayout } from "@pages/MainLayout";
 import { Home } from "@pages/Home";
 import { NotFound } from "../NotFound";
@@ -9,7 +9,7 @@ import { Favorites } from "@pages/Favorites";
 import { StyledApp } from "./styled";
 
 const App: React.FC = () => {
-  const context = useAppContext();
+  const context = useLocalStorage([], "favorites");
 
   return (
     <Context.Provider value={context}>

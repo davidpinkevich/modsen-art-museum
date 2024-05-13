@@ -11,6 +11,8 @@ const useLocalStorage = (init: TypeArt[], key: string) => {
     }
   };
   const [favorites, setSavorites] = useState(getValue);
+  const [open, setOpen] = useState<boolean>(false);
+
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(favorites));
   }, [favorites]);
@@ -25,7 +27,7 @@ const useLocalStorage = (init: TypeArt[], key: string) => {
     }
   };
 
-  return [favorites, addFavorite];
+  return { favorites, addFavorite, open, setOpen };
 };
 
 export { useLocalStorage };
