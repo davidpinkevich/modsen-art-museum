@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledBlockArts = styled.div`
+const StyledBlockArts = styled.section`
   width: 100%;
   margin-top: 40px;
   font-family: "Lexend Deca";
 `;
 
-const StyledBlockArtTitle = styled.div`
+const StyledBlockArtTitle = styled.h2`
   text-align: center;
   font-size: 16px;
   line-height: 20px;
@@ -18,7 +18,7 @@ const StyledBlockArtTitle = styled.div`
   }
 `;
 
-const StyledBlockArtInfo = styled.div`
+const StyledBlockArtInfo = styled.p`
   text-align: center;
   font-size: 32px;
   line-height: 40px;

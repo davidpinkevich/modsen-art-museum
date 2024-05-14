@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledMenu = styled.div<{ open: boolean }>`
+const StyledMenu = styled.nav<{ open: boolean }>`
   display: flex;
   gap: 32px;
   transition: all 0.2s;

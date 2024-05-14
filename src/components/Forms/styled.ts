@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledFormBody = styled.div`
+const StyledFormBody = styled.section`
   max-width: 762px;
   width: 100%;
   display: flex;

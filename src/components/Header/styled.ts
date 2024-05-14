@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   position: relative;
   display: flex;
   align-items: center;

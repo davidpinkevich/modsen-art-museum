@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledDetail = styled.div`
+const StyledDetail = styled.section`
   display: flex;
   justify-content: flex-start;
   gap: 80px;

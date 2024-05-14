@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledNF = styled.div<{ type: string }>`
+const StyledNF = styled.article<{ type: string }>`
   position: relative;
   display: flex;
   flex-direction: column;

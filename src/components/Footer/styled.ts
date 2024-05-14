@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { BREAKPOINTS } from "@constants/data";
 
-const StyledFooter = styled.div`
+const StyledFooter = styled.footer`
   position: relative;
   display: flex;
   align-items: center;

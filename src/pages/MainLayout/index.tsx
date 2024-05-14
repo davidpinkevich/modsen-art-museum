@@ -12,7 +12,9 @@ const MainLayout: React.FC = () => {
         <Header />
       </ErrorBoundary>
       <ErrorBoundary>
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
       </ErrorBoundary>
       <ErrorBoundary>
         <Footer />
