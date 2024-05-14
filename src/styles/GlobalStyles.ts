@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+
 import Inter from "@assets/fonts/Inter.ttf";
 import LexendDeca from "@assets/fonts/LexendDeca.ttf";
 

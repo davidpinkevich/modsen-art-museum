@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledBlockArts = styled.section`
@@ -61,9 +62,9 @@ const StyledItemsWrap = styled.div<{ type: string }>`
 `;
 
 export {
+  StyledBlockArtInfo,
   StyledBlockArts,
   StyledBlockArtTitle,
-  StyledBlockArtInfo,
   StyledBlockItems,
   StyledItemsWrap
 };

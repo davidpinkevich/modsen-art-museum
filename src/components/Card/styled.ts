@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledCardWrapper = styled.div<{ type: string }>`
@@ -45,4 +46,4 @@ const StyledCardImg = styled.img<{ type: string }>`
   }
 `;
 
-export { StyledCard, StyledCardWrapper, StyledCardImg };
+export { StyledCard, StyledCardImg, StyledCardWrapper };

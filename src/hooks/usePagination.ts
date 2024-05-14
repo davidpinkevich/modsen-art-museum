@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+
 import { createArrayPagination } from "@utils/helpers/changePagination";
 
 const usePagination = (page: number, total: number) => {

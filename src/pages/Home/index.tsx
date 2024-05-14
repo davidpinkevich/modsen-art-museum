@@ -1,6 +1,7 @@
 import { useHomePage } from "@hooks/useHomePage";
-import { Forms } from "@components/Forms";
+
 import { BlockArts } from "@components/BlockArts";
+import { Forms } from "@components/Forms";
 import { Pagination } from "@components/Pagination";
 
 const Home: React.FC = () => {

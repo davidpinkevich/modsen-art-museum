@@ -1,12 +1,13 @@
 import image from "@assets/icons/error.svg";
+import { type TypeFallback } from "@src/types";
+
 import {
   StyledFallback,
   StyledFallbackBlock,
   StyledFallbackImg,
-  StyledFallbackTitle,
-  StyledFallbackInfo
+  StyledFallbackInfo,
+  StyledFallbackTitle
 } from "./styled";
-import { type TypeFallback } from "@src/types";
 
 const Fallback: React.FC<TypeFallback> = ({ logger }) => {
   return (

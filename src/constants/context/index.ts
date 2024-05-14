@@ -1,4 +1,5 @@
 import { createContext } from "react";
+
 import { type TypeContext } from "@src/types";
 
 const Context = createContext<TypeContext>({

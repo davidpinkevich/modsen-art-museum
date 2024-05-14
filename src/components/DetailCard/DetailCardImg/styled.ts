@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledDetailWrap = styled.div`
@@ -38,4 +39,4 @@ const StyledDetailBtn = styled.div`
   right: 16px;
 `;
 
-export { StyledDetailWrap, StyledDetailImg, StyledDetailBtn };
+export { StyledDetailBtn, StyledDetailImg, StyledDetailWrap };

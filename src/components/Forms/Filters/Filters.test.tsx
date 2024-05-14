@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+
 import { Filters } from ".";
 
 describe("Filters component", () => {

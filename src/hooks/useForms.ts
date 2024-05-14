@@ -1,7 +1,8 @@
-import { type FormikConfig } from "formik";
 import { debounce } from "@utils/helpers/debounce";
 import { validateSchema } from "@utils/helpers/validate";
 import { type TypeForm, type TypeForms } from "@src/types";
+
+import { type FormikConfig } from "formik";
 
 const useForms = ({ setSearch, setPage }: TypeForms) => {
   const getDebounceValue = debounce(setSearch, setPage);

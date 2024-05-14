@@ -1,7 +1,8 @@
 import { FILTERS } from "@constants/data";
 import { getNameFilter } from "@utils/helpers/getNameFilter";
-import { StyledFilters, StyledFiltersBtn } from "./styled";
 import { type TypeFilters } from "@src/types";
+
+import { StyledFilters, StyledFiltersBtn } from "./styled";
 
 const Filters: React.FC<TypeFilters> = ({
   filter,

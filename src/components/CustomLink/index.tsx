@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
-import { StyledLink, StyledLinkImage, StyledLinkTitle } from "./styled";
+
 import { type TypeLinkHeader } from "@src/types";
+
+import { StyledLink, StyledLinkImage, StyledLinkTitle } from "./styled";
 
 const CustomLink: React.FC<TypeLinkHeader> = ({
   type,

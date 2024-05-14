@@ -1,4 +1,4 @@
-import { StyledLoading, SpanOne, SpanTwo, SpanThree } from "./styled";
+import { SpanOne, SpanThree, SpanTwo, StyledLoading } from "./styled";
 
 const Loading: React.FC = () => {
   return (

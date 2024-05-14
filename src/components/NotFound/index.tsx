@@ -1,8 +1,9 @@
 import { getNotFound } from "@utils/helpers/getNotFound";
-import imageFind from "@assets/icons/not-found.webp";
 import imageError from "@assets/icons/404.svg";
-import { StyledNF, StyledNFImage, StyledNFInfo } from "./styled";
+import imageFind from "@assets/icons/not-found.webp";
 import { type TypeNotFound } from "@src/types";
+
+import { StyledNF, StyledNFImage, StyledNFInfo } from "./styled";
 
 const NotFound: React.FC<TypeNotFound> = ({ type }) => {
   return (

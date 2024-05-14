@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledInputBody = styled.div`
@@ -58,4 +59,4 @@ const StyledValidate = styled.div`
   font-weight: 500;
 `;
 
-export { StyledInputBody, StyledInput, StyledValidate, StyledInputImg };
+export { StyledInput, StyledInputBody, StyledInputImg, StyledValidate };

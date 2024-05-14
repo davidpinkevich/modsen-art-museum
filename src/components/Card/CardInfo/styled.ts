@@ -26,4 +26,4 @@ const StyledCardPublic = styled.p`
   color: rgba(57, 57, 57, 1);
 `;
 
-export { StyledCardInfo, StyledCardTitle, StyledCardName, StyledCardPublic };
+export { StyledCardInfo, StyledCardName, StyledCardPublic, StyledCardTitle };

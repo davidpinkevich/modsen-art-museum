@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledDetailCardInfo = styled.div`
@@ -47,8 +48,8 @@ const StyledInfoString = styled.p`
 export {
   StyledDetailCardInfo,
   StyledInfoBlock,
-  StyledInfoTitle,
-  StyledInfoName,
   StyledInfoDate,
-  StyledInfoString
+  StyledInfoName,
+  StyledInfoString,
+  StyledInfoTitle
 };

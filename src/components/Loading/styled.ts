@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 import { pulsLoading } from "@styles/animation";
 
@@ -53,4 +54,4 @@ const SpanThree = styled(StyledLoadingSpan)`
   animation: ${pulsLoading} 0.4s ease 0.2s infinite;
 `;
 
-export { StyledLoading, SpanOne, SpanTwo, SpanThree };
+export { SpanOne, SpanThree, SpanTwo, StyledLoading };

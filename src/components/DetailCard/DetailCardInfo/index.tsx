@@ -1,12 +1,13 @@
+import { type TypeArt } from "@src/types";
+
 import {
   StyledDetailCardInfo,
   StyledInfoBlock,
-  StyledInfoTitle,
-  StyledInfoName,
   StyledInfoDate,
-  StyledInfoString
+  StyledInfoName,
+  StyledInfoString,
+  StyledInfoTitle
 } from "./styled";
-import { type TypeArt } from "@src/types";
 
 const DetailCardInfo: React.FC<TypeArt> = ({
   title,

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { BREAKPOINTS } from "@constants/data";
 
 const StyledFormBody = styled.section`
@@ -36,4 +37,4 @@ const StyledFormTitle = styled.h2`
   }
 `;
 
-export { StyledFormBody, StyledForm, StyledFormTitle };
+export { StyledForm, StyledFormBody, StyledFormTitle };

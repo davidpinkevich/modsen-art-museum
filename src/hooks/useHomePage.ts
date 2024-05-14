@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import { RANDOM_ARTS_VIEW, LENGTH_VIEW_MAIN } from "@constants/data";
+import { useEffect, useState } from "react";
+
+import { LENGTH_VIEW_MAIN, RANDOM_ARTS_VIEW } from "@constants/data";
 import { getRandomPage } from "@utils/helpers/getRandomPage";
 import { service } from "@utils/services/baseApi";
 import { type TypeArt } from "@src/types";

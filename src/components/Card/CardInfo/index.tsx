@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
+
 import { LINK_PATH } from "@constants/data";
 import { cutString } from "@utils/helpers/cutString";
+import { type TypeCard } from "@src/types";
+
 import {
   StyledCardInfo,
-  StyledCardTitle,
   StyledCardName,
-  StyledCardPublic
+  StyledCardPublic,
+  StyledCardTitle
 } from "./styled";
-import { type TypeCard } from "@src/types";
 
 const CardInfo: React.FC<TypeCard> = ({ item }) => {
   return (

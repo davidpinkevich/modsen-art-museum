@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+
 import { service } from "@utils/services/baseApi";
 import { type TypeArt } from "@src/types";
 

@@ -1,7 +1,9 @@
 import { render } from "@testing-library/react";
-import { DetailInfo } from ".";
-import { dataMock } from "@mocks/data";
+
 import { useDetailInfo } from "@hooks/useDetailInfo";
+import { dataMock } from "@mocks/data";
+
+import { DetailInfo } from ".";
 
 jest.mock("@hooks/useDetailInfo");
 

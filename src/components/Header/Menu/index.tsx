@@ -1,9 +1,12 @@
 import { useContext } from "react";
+
 import { Context } from "@constants/context";
 import { LINK_PATH } from "@constants/data";
-import { CustomLink } from "@components/CustomLink";
-import homeImg from "@assets/icons/home.svg";
 import favorite from "@assets/icons/favorite.svg";
+import homeImg from "@assets/icons/home.svg";
+
+import { CustomLink } from "@components/CustomLink";
+
 import { StyledMenu, StyledMenuBtn } from "./styled";
 
 const Menu: React.FC = () => {

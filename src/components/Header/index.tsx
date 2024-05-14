@@ -1,10 +1,12 @@
-import { StyledHeader, StyledHeaderContainer } from "./styled";
-import { Menu } from "./Menu";
-import { Burger } from "./Burger";
-import { CustomLink } from "../CustomLink";
 import { LINK_PATH } from "@constants/data";
-import { Container } from "@styles/Container";
 import logoImg from "@assets/icons/logo.svg";
+import { Container } from "@styles/Container";
+
+import { CustomLink } from "../CustomLink";
+
+import { Burger } from "./Burger";
+import { Menu } from "./Menu";
+import { StyledHeader, StyledHeaderContainer } from "./styled";
 
 const Header: React.FC = () => {
   return (

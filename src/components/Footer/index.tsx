@@ -1,8 +1,10 @@
-import { CustomLink } from "../CustomLink";
 import { LINK_MODSEN, LINK_PATH } from "@constants/data";
-import { Container } from "@styles/Container";
 import logoImg from "@assets/icons/logo.svg";
 import logoModsen from "@assets/icons/modsen.svg";
+import { Container } from "@styles/Container";
+
+import { CustomLink } from "../CustomLink";
+
 import { StyledFooter } from "./styled";
 
 const Footer: React.FC = () => {

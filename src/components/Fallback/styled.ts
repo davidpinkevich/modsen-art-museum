@@ -33,6 +33,6 @@ export {
   StyledFallback,
   StyledFallbackBlock,
   StyledFallbackImg,
-  StyledFallbackTitle,
-  StyledFallbackInfo
+  StyledFallbackInfo,
+  StyledFallbackTitle
 };

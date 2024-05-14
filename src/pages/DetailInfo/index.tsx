@@ -1,8 +1,9 @@
 import { useDetailInfo } from "@hooks/useDetailInfo";
-import { DetailCard } from "@components/DetailCard";
-import { NotFound } from "@components/NotFound";
-import { Loading } from "@components/Loading";
 import { Container } from "@styles/Container";
+
+import { DetailCard } from "@components/DetailCard";
+import { Loading } from "@components/Loading";
+import { NotFound } from "@components/NotFound";
 
 const DetailInfo: React.FC = () => {
   const { art, loadArt } = useDetailInfo();

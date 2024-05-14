@@ -1,11 +1,15 @@
-import { Routes, Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
+
 import { Context } from "@constants/context";
 import { useLocalStorage } from "@hooks/useLocalStorage";
-import { MainLayout } from "@pages/MainLayout";
-import { Home } from "@pages/Home";
-import { NotFound } from "../NotFound";
+
 import { DetailInfo } from "@pages/DetailInfo";
 import { Favorites } from "@pages/Favorites";
+import { Home } from "@pages/Home";
+import { MainLayout } from "@pages/MainLayout";
+
+import { NotFound } from "../NotFound";
+
 import { StyledApp } from "./styled";
 
 const routes = [

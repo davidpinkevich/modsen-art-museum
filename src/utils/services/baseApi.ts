@@ -1,7 +1,8 @@
 import { getFilter } from "@utils/helpers/getFilter";
 import { getSearch } from "@utils/helpers/getSearch";
-import { createImages } from "../helpers/createImages";
 import { type TypeArt, type TypeArts } from "@src/types";
+
+import { createImages } from "../helpers/createImages";
 
 class MuseumService {
   async getFullInformation(id: string) {

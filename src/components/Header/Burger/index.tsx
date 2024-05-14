@@ -1,5 +1,7 @@
 import { useContext } from "react";
+
 import { Context } from "@constants/context";
+
 import { StyledBurger, StyledBurgerSpan } from "./styled";
 
 const Burger: React.FC = () => {

@@ -1,5 +1,7 @@
 import { useContext } from "react";
+
 import { Context } from "@constants/context";
+
 import { BlockArts } from "@components/BlockArts";
 
 const Favorites: React.FC = () => {

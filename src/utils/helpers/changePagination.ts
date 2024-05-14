@@ -52,4 +52,4 @@ const changePage = (
   }
 };
 
-export { createArrayPagination, changePage };
+export { changePage, createArrayPagination };

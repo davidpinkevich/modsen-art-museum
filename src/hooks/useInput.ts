@@ -1,6 +1,8 @@
 import { type ChangeEventHandler, useEffect } from "react";
-import { useField, useFormikContext } from "formik";
+
 import { type TypeForm } from "@src/types";
+
+import { useField, useFormikContext } from "formik";
 
 const useInput = () => {
   const { isValid, handleSubmit } = useFormikContext<TypeForm>();

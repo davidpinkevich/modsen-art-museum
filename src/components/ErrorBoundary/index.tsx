@@ -1,8 +1,10 @@
-import { Component, type ReactNode, type ErrorInfo } from "react";
+import { Component, type ErrorInfo, type ReactNode } from "react";
+
 import {
   type TypeErrorBoundaryProps,
   type TypeErrorBoundaryState
 } from "@src/types";
+
 import { Fallback } from "../Fallback";
 
 class ErrorBoundary extends Component<

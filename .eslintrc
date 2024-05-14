@@ -25,7 +25,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "simple-import-sort"],
   "rules": {
     "@typescript-eslint/triple-slash-reference": "off",
     "react/react-in-jsx-scope": "off",
@@ -45,6 +45,29 @@
     "@typescript-eslint/no-empty-function": "off",
     "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/no-var-reqiures": "off",
-    "@typescript-eslint/no-confusing-void-expression": "off"
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          ["^react", "^styled-components", "^@testing-library"],
+          [
+            "^@constants(/.*|$)",
+            "^@utils(/.*|$)",
+            "^@hooks(/.*|$)",
+            "^@assets(/.*|$)",
+            "^@styles(/.*|$)",
+            "^@mocks(/.*|$)",
+            "^@src/types(/.*|$)"
+          ],
+          ["^@pages(/.*|$)", "^@components(/.*|$)"],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^.+\\.?(css)$"]
+        ]
+      }
+    ]
   }
 }

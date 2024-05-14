@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { CardInfo } from "./CardInfo";
-import { CardButton } from "./CardButton";
+
 import { LINK_PATH } from "@constants/data";
 import template from "@assets/icons/template.svg";
-import { StyledCard, StyledCardWrapper, StyledCardImg } from "./styled";
 import { type TypeCard } from "@src/types";
+
+import { CardButton } from "./CardButton";
+import { CardInfo } from "./CardInfo";
+import { StyledCard, StyledCardImg, StyledCardWrapper } from "./styled";
 
 const Card: React.FC<TypeCard> = ({ item, type = "main" }) => {
   return (

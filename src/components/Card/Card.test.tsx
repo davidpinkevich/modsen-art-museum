@@ -1,7 +1,9 @@
-import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Card } from ".";
+import { render, screen } from "@testing-library/react";
+
 import { dataMock } from "@mocks/data";
+
+import { Card } from ".";
 
 describe("Card component", () => {
   test("renders main card with mock data", () => {

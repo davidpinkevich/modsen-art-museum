@@ -1,13 +1,14 @@
-import { usePagination } from "@hooks/usePagination";
 import { changePage } from "@utils/helpers/changePagination";
+import { usePagination } from "@hooks/usePagination";
+import left from "@assets/icons/arrow-left.svg";
+import right from "@assets/icons/arrow-right.svg";
+import { type TypePagination } from "@src/types";
+
 import {
   StyledPagination,
   StyledPaginationBtn,
   StyledPaginationImg
 } from "./styled";
-import left from "@assets/icons/arrow-left.svg";
-import right from "@assets/icons/arrow-right.svg";
-import { type TypePagination } from "@src/types";
 
 const Pagination: React.FC<TypePagination> = ({
   total,

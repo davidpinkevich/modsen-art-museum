@@ -1,11 +1,14 @@
 import { memo } from "react";
-import { Formik } from "formik";
+
 import { useForms } from "@hooks/useForms";
-import { InputSearch } from "./InputSearch";
-import { Filters } from "./Filters";
-import { StyledFormBody, StyledFormTitle, StyledForm } from "./styled";
 import { Container } from "@styles/Container";
 import { type TypeForms } from "@src/types";
+
+import { Filters } from "./Filters";
+import { InputSearch } from "./InputSearch";
+import { StyledForm, StyledFormBody, StyledFormTitle } from "./styled";
+
+import { Formik } from "formik";
 
 const Forms: React.FC<TypeForms> = memo(
   ({ filter, load, setFilter, setPage, setSearch }) => {

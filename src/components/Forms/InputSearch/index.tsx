@@ -1,13 +1,15 @@
 import { type KeyboardEvent } from "react";
-import {
-  StyledInputBody,
-  StyledInput,
-  StyledValidate,
-  StyledInputImg
-} from "./styled";
-import glass from "@assets/icons/glass.svg";
 
 import { useInput } from "@hooks/useInput";
+import glass from "@assets/icons/glass.svg";
+
+import {
+  StyledInput,
+  StyledInputBody,
+  StyledInputImg,
+  StyledValidate
+} from "./styled";
+
 const InputSearch: React.FC = () => {
   const { value, error, handleChange } = useInput();
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
