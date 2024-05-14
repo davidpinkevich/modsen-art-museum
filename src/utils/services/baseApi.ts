@@ -52,7 +52,7 @@ class MuseumService {
   ): Promise<TypeArt[] | undefined> {
     try {
       const respone = await fetch(
-        `${process.env.BASE_UsdRL}?limit=${limit}&page=${page}`
+        `${process.env.BASE_URL}?limit=${limit}&page=${page}`
       );
       const result: TypeArts = await respone.json();
 
