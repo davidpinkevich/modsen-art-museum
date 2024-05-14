@@ -22,22 +22,23 @@ const StyledCard = styled.div<{ type: string }>`
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
     transform: scale(1.05);
   }
-  @media (max-width: ${BREAKPOINTS.sm}) {
+  @media (max-width: ${BREAKPOINTS.lg}) {
     &:hover {
       transform: scale(1);
     }
   }
 `;
 
-const StyledCardImg = styled.img`
-  width: 100%;
-  height: 387px;
+const StyledCardImg = styled.img<{ type: string }>`
   transition: all 0.2s;
+  width: ${(props) => (props.type === "main" ? "100%" : "80px")};
+  height: ${(props) => (props.type === "main" ? "387px" : "80px")};
   &:hover {
-    box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.5);
-    transform: scale(1.01);
+    box-shadow: ${(props) =>
+      props.type === "main" ? "0px 0px 3px 2px rgba(0, 0, 0, 0.5)" : "none"};
+    transform: ${(props) => (props.type === "main" ? "scale(1.01)" : "none")};
   }
-  @media (max-width: ${BREAKPOINTS.sm}) {
+  @media (max-width: ${BREAKPOINTS.lg}) {
     &:hover {
       transform: scale(1);
     }

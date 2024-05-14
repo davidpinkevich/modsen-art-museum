@@ -8,6 +8,19 @@ import { DetailInfo } from "@pages/DetailInfo";
 import { Favorites } from "@pages/Favorites";
 import { StyledApp } from "./styled";
 
+const routes = [
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: "detail-info/:id", element: <DetailInfo /> },
+      { path: "favorites", element: <Favorites /> },
+      { path: "*", element: <NotFound type="page" /> }
+    ]
+  }
+];
+
 const App: React.FC = () => {
   const context = useLocalStorage([], "favorites");
 
@@ -15,12 +28,14 @@ const App: React.FC = () => {
     <Context.Provider value={context}>
       <StyledApp open={context.open}>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
-            <Route index element={<Home />} />
-            <Route path="detail-info/:id" element={<DetailInfo />} />
-            <Route path="favorites" element={<Favorites />} />
-            <Route path="*" element={<NotFound type="page" />} />
-          </Route>
+          {routes.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element}>
+              {route.children &&
+                route.children.map((child, childIndex) => (
+                  <Route key={childIndex} {...child} />
+                ))}
+            </Route>
+          ))}
         </Routes>
       </StyledApp>
     </Context.Provider>
