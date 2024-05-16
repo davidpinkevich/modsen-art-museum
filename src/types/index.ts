@@ -101,3 +101,41 @@ export interface TypeErrorBoundaryState {
   hasError: boolean;
   info: string;
 }
+
+export interface TypesTheme {
+  fontSizes: {
+    extraSmall: string;
+    small: string;
+    mediumSmall: string;
+    medium: string;
+    large: string;
+    extraLarge: string;
+    extraLarge2: string;
+    extraLarge3: string;
+    extraLarge4: string;
+    huge: string;
+    huge2: string;
+    huge3: string;
+    massive: string;
+  };
+  colors: {
+    mainBack: string;
+    lightBlack: string;
+    gold: string;
+    lightGold: string;
+    white: string;
+    whiteBack: string;
+    lightWhite: string;
+    secondWhite: string;
+    gray: string;
+    lightGray: string;
+    error: string;
+    input: {
+      black: string;
+      hover: string;
+      focus: string;
+      back: string;
+      placeholder: string;
+    };
+  };
+}
