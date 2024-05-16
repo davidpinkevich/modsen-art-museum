@@ -22,7 +22,7 @@ const StyledBurger = styled.button<{ open: boolean }>`
     position: absolute;
     height: 2px;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: ${(props) => props.theme.colors.lightWhite};
     transition: 0.2s all;
   }
   &::before {
@@ -40,7 +40,7 @@ const StyledBurger = styled.button<{ open: boolean }>`
 const StyledBurgerSpan = styled.span<{ open: boolean }>`
   height: 2px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: ${(props) => props.theme.colors.lightWhite};
   transform: ${(props) => (props.open ? "scale(0)" : "scale(1)")};
 `;
 

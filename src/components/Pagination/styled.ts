@@ -14,14 +14,16 @@ const StyledPaginationBtn = styled.button<{ type?: string }>`
   justify-content: center;
   background-color: ${(props) =>
     props.type === "active"
-      ? "rgba(241, 121, 0, 1)"
-      : "rgba(255, 255, 255, 1)"};
+      ? `${props.theme.colors.gold}`
+      : `${props.theme.colors.white}`};
   color: ${(props) =>
-    props.type === "active" ? "rgba(255, 255, 255, 1)" : "rgba(0, 0, 0, 1)"};
+    props.type === "active"
+      ? `${props.theme.colors.white}`
+      : `${props.theme.colors.lightBlack}`};
   align-items: center;
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  font-size: 22px;
+  font-size: ${(props) => props.theme.fontSizes.large};
   line-height: 140%;
   transition: all 0.2s;
   &:hover {

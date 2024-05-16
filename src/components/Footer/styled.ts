@@ -8,7 +8,7 @@ const StyledFooter = styled.footer`
   align-items: center;
   width: 100%;
   height: 127px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${(props) => props.theme.colors.white};
   margin-top: 120px;
   @media (max-width: ${BREAKPOINTS.md}) {
     height: 120px;

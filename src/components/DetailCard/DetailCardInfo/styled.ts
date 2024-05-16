@@ -17,31 +17,31 @@ const StyledInfoBlock = styled.div`
 `;
 
 const StyledInfoTitle = styled.h2`
-  color: rgba(57, 57, 57, 1);
-  font-size: 32px;
+  color: ${(props) => props.theme.colors.lightBlack};
+  font-size: ${(props) => props.theme.fontSizes.extraLarge3};
   margin-bottom: 15px;
   @media (max-width: ${BREAKPOINTS.md}) {
-    font-size: 28px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge2};
     margin-bottom: 8px;
   }
 `;
 
 const StyledInfoName = styled.p`
-  font-size: 24px;
-  color: rgba(224, 164, 73, 1);
+  font-size: ${(props) => props.theme.fontSizes.extraLarge};
+  color: ${(props) => props.theme.colors.lightGold};
 `;
 
 const StyledInfoDate = styled.p`
-  font-size: 16px;
+  font-size: ${(props) => props.theme.fontSizes.small};
   font-weight: 700;
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
 `;
 
 const StyledInfoString = styled.p`
-  font-size: 16px;
-  color: rgba(224, 164, 73, 1);
+  font-size: ${(props) => props.theme.fontSizes.small};
+  color: ${(props) => props.theme.colors.lightGold};
   & span {
-    color: rgba(57, 57, 57, 1);
+    color: ${(props) => props.theme.colors.lightBlack};
   }
 `;
 

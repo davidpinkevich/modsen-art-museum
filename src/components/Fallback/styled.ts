@@ -20,13 +20,13 @@ const StyledFallbackImg = styled.img`
 `;
 
 const StyledFallbackTitle = styled.h2`
-  font-size: 24px;
+  font-size: ${(props) => props.theme.fontSizes.extraLarge};
   font-weight: 500;
 `;
 
 const StyledFallbackInfo = styled.p`
-  font-size: 20px;
-  color: rgba(57, 57, 57, 1);
+  font-size: ${(props) => props.theme.fontSizes.medium};
+  color: ${(props) => props.theme.colors.lightBlack};
 `;
 
 export {

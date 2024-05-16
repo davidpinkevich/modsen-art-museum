@@ -1,7 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
 
 import { GlobalStyles } from "@styles/GlobalStyles";
+import { myTheme } from "@styles/myTheme";
 
 import { App } from "@components/App";
 
@@ -13,7 +15,9 @@ if (root === null) {
 
 createRoot(root).render(
   <BrowserRouter>
-    <GlobalStyles />
-    <App />
+    <ThemeProvider theme={myTheme}>
+      <GlobalStyles />
+      <App />
+    </ThemeProvider>
   </BrowserRouter>
 );

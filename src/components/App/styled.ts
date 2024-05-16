@@ -17,7 +17,7 @@ const StyledApp = styled.div<{ open: boolean }>`
       right: 0;
       width: ${(props) => (props.open ? "100%" : "none")};
       height: ${(props) => (props.open ? "100%" : "none")};
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: ${(props) => props.theme.colors.mainBack};
     }
   }
 `;

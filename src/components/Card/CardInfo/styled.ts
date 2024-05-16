@@ -7,23 +7,23 @@ const StyledCardInfo = styled.div`
 
 const StyledCardTitle = styled.h3`
   font-weight: 500;
-  font-size: 17.54px;
+  font-size: ${(props) => props.theme.fontSizes.mediumSmall};
   line-height: 26.32px;
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
 `;
 
 const StyledCardName = styled.p`
   font-weight: 400;
-  font-size: 15.35px;
+  font-size: ${(props) => props.theme.fontSizes.small};
   line-height: 26.32px;
-  color: rgba(224, 164, 73, 1);
+  color: ${(props) => props.theme.colors.lightGold};
 `;
 
 const StyledCardPublic = styled.p`
   font-weight: 700;
-  font-size: 15.35px;
+  font-size: ${(props) => props.theme.fontSizes.small};
   line-height: 26.32px;
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
 `;
 
 export { StyledCardInfo, StyledCardName, StyledCardPublic, StyledCardTitle };

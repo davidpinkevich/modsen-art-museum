@@ -17,23 +17,23 @@ const StyledForm = styled.form`
 const StyledFormTitle = styled.h2`
   font-family: "Lexend Deca";
   font-weight: 700;
-  font-size: 64px;
+  font-size: ${(props) => props.theme.fontSizes.massive};
   line-height: 80px;
   text-align: center;
   margin-top: 120px;
   @media (max-width: ${BREAKPOINTS.lg}) {
     margin-top: 80px;
-    font-size: 50px;
+    font-size: ${(props) => props.theme.fontSizes.huge3};
     line-height: 54px;
   }
   @media (max-width: ${BREAKPOINTS.md}) {
     margin-top: 30px;
-    font-size: 34px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge4};
     line-height: 40px;
   }
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
   & span {
-    color: rgba(241, 121, 0, 1);
+    color: ${(props) => props.theme.colors.gold};
   }
 `;
 

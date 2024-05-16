@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     font-family: 'Inter';
-    background-color: rgba(250,250,250,1);
+    background-color: ${(props) => props.theme.colors.whiteBack};
   }
   * {
     padding: 0;
@@ -50,7 +50,7 @@ const GlobalStyles = createGlobalStyle`
     width: 100%;
     font-size: 100%;
     line-height: 1;
-    font-size: 14px;
+    font-size: ${(props) => props.theme.fontSizes.extraSmall};
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

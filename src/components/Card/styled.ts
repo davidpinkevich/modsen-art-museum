@@ -18,9 +18,10 @@ const StyledCard = styled.div<{ type: string }>`
   position: ${(props) => (props.type === "main" ? "relative" : "static")};
   width: ${(props) => (props.type === "main" ? "90%" : "100%")};
   padding: ${(props) => (props.type === "random" ? "16px 13px" : "17px 24px")};
-  background-color: rgba(255, 255, 255, 1);
+  background-color: ${(props) => props.theme.colors.white};
   &:hover {
     box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: ${(props) => `0px 0px 3px 1px ${props.theme.colors.mainBack}`};
     transform: scale(1.05);
   }
   @media (max-width: ${BREAKPOINTS.lg}) {

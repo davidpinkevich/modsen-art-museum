@@ -6,18 +6,18 @@ import { pulsLoading } from "@styles/animation";
 const StyledLoading = styled.div`
   text-align: center;
   font-family: "Inter";
-  font-size: 54px;
-  color: rgba(224, 164, 73, 1);
+  font-size: ${(props) => props.theme.fontSizes.huge3};
+  color: ${(props) => props.theme.colors.lightGold};
   flex-grow: 1;
   @media (max-width: ${BREAKPOINTS.lg}) {
     height: 507px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 34px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge4};
   }
   @media (max-width: ${BREAKPOINTS.md}) {
-    font-size: 28px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge2};
   }
 `;
 
@@ -27,7 +27,7 @@ const StyledLoadingSpan = styled.span`
   height: 10px;
   border-radius: 50%;
   margin: 0 5px;
-  background-color: rgba(224, 164, 73, 1);
+  background-color: ${(props) => props.theme.colors.lightGold};
   @media (max-width: ${BREAKPOINTS.lg}) {
     width: 7px;
     height: 7px;

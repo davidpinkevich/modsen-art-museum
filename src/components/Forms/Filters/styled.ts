@@ -37,18 +37,22 @@ const StyledFiltersBtn = styled.button<{ type: string }>`
   }
   background-color: ${(props) =>
     props.type === "active"
-      ? "rgba(224, 164, 73, 1)"
-      : "rgba(57, 57, 57, 0.05)"};
+      ? `${props.theme.colors.lightGold}`
+      : `${props.theme.colors.secondWhite}`};
   color: ${(props) =>
-    props.type === "active" ? "rgba(255, 255, 255, 1)" : "rgba(57, 57, 57, 1)"};
-  font-size: 16px;
+    props.type === "active"
+      ? `${props.theme.colors.white}`
+      : `${props.theme.colors.lightBlack}`};
+  font-size: ${(props) => props.theme.fontSizes.small};
   font-weight: ${(props) => (props.type === "active" ? 600 : 500)};
   text-shadow: ${(props) =>
-    props.type === "active" ? "0px  2px 2px rgba(57, 57, 57, 1)" : "none"};
+    props.type === "active"
+      ? `0px  2px 2px ${props.theme.colors.lightBlack}`
+      : "none"};
   flex-basis: 25%;
   transition: all 0.2s;
   &:hover {
-    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: ${(props) => `0px 0px 4px 2px ${props.theme.colors.mainBack}`};
   }
   &:disabled {
     opacity: 0.6;

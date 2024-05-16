@@ -38,21 +38,27 @@ const StyledLinkImage = styled.div<{ type: string }>`
 `;
 
 const StyledLinkTitle = styled.h2<{ type: string }>`
-  font-size: ${(props) => (props.type === "menu" ? "16px" : "18px")};
+  font-size: ${(props) =>
+    props.type === "menu"
+      ? `${props.theme.fontSizes.small}`
+      : `${props.theme.fontSizes.mediumSmall}`};
   transition: all 0.2s;
   color: ${(props) =>
     props.type === "logo-footer"
-      ? "rgba(57, 57, 57, 1)"
-      : "rgba(255, 255, 255, 1)"};
+      ? `${props.theme.colors.lightBlack}`
+      : `${props.theme.colors.white}`};
 
   &:hover {
-    color: rgba(224, 164, 73, 1);
+    color: ${(props) => props.theme.colors.lightGold};
   }
   @media (max-width: ${BREAKPOINTS.sm}) {
-    font-size: ${(props) => (props.type === "menu" ? "28px" : "18px")};
+    font-size: ${(props) =>
+      props.type === "menu"
+        ? `${props.theme.fontSizes.extraLarge2}`
+        : `${props.theme.fontSizes.mediumSmall}`};
   }
   & span {
-    color: rgba(224, 164, 73, 1);
+    color: ${(props) => props.theme.colors.lightGold};
     font-weight: 600;
   }
 `;

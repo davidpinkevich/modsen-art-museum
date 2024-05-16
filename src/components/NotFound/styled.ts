@@ -30,11 +30,11 @@ const StyledNFImage = styled.img<{ type: string }>`
 const StyledNFInfo = styled.p`
   object-fit: cover;
   text-align: center;
-  font-size: 52px;
+  font-size: ${(props) => props.theme.fontSizes.huge2};
   font-weight: 500;
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge2};
   }
 `;
 

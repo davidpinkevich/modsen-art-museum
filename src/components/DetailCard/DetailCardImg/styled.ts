@@ -34,7 +34,7 @@ const StyledDetailImg = styled.img`
 const StyledDetailBtn = styled.div`
   position: absolute;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: ${(props) => props.theme.colors.lightGray};
   top: 16px;
   right: 16px;
 `;

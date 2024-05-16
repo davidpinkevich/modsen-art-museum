@@ -10,23 +10,23 @@ const StyledBlockArts = styled.section`
 
 const StyledBlockArtTitle = styled.h2`
   text-align: center;
-  font-size: 16px;
+  font-size: ${(props) => props.theme.fontSizes.small};
   line-height: 20px;
-  color: rgba(224, 164, 73, 1);
+  color: ${(props) => props.theme.colors.lightGold};
   @media (max-width: ${BREAKPOINTS.md}) {
-    font-size: 14px;
+    font-size: ${(props) => props.theme.fontSizes.extraSmall};
     line-height: 18px;
   }
 `;
 
 const StyledBlockArtInfo = styled.p`
   text-align: center;
-  font-size: 32px;
+  font-size: ${(props) => props.theme.fontSizes.extraLarge3};
   line-height: 40px;
   margin-bottom: 40px;
-  color: rgba(57, 57, 57, 1);
+  color: ${(props) => props.theme.colors.lightBlack};
   @media (max-width: ${BREAKPOINTS.md}) {
-    font-size: 28px;
+    font-size: ${(props) => props.theme.fontSizes.extraLarge2};
     line-height: 34px;
   }
 `;
