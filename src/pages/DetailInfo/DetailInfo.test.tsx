@@ -21,12 +21,12 @@ describe("Detail Info component", () => {
     expect(getByText("The Bedroom")).toBeInTheDocument();
   });
 
-  test("error data", async () => {
+  test("not found data", async () => {
     (useDetailInfo as jest.Mock).mockReturnValue({
       art: undefined,
       loadArt: false
     });
     const { getByText } = render(<DetailInfo />);
-    expect(getByText("This kind of art doesn't exist")).toBeInTheDocument();
+    expect(getByText("Resource Not Found")).toBeInTheDocument();
   });
 });
